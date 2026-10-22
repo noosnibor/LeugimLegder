@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "drop-ec166c63-587",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-16",
+  "assets": {"directory": "./public", "binding": "ASSETS"},
+  "d1_databases": [{"binding": "DB", "database_name": "homeledger-db", "database_id": "12b3858e-2fe7-4eff-a1b6-f6a9bdce610d"}]
+}

@@ -1,0 +1,334 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Household Budget • Monthly Planner</title><style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#19304a;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}.side{background:#112a44;color:white;padding:27px 19px}.brand{font-weight:800;font-size:22px;line-height:1.15}.brand small{display:block;color:#91adc6;font-weight:500;font-size:12px;margin-top:8px}.nav{margin-top:36px;display:grid;gap:7px}.nav button{border:0;text-align:left;background:transparent;color:#bdd0df;padding:13px 14px;border-radius:11px}.nav button.active,.nav button:hover{background:#294863;color:white}.bottom{margin-top:35px;font-size:12px;color:#9fb6c9;line-height:1.7}.main{padding:29px 37px;max-width:1580px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap}.eyebrow{color:#668099;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:800}.top h1{margin:5px 0 7px;font-size:29px}.muted{color:#71849a;font-size:13px}.controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.btn{background:#1b6a92;color:white;border:0;padding:11px 15px;border-radius:9px;font-weight:650}.btn.secondary{background:white;color:#294b65;border:1px solid #d7e1e9}.btn.danger{background:#fff1f1;color:#b42929}.btn.small{padding:7px 10px;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin:24px 0}.card,.panel{background:#fff;border:1px solid #e1e8f0;border-radius:15px;box-shadow:0 3px 16px #15365208}.card{padding:19px}.card .value{font-size:26px;font-weight:800;margin:9px 0}.card .label{font-size:13px;color:#688197}.card .foot{font-size:12px;color:#8195a5}.green{color:#167960}.red{color:#c14b4b}.panel{padding:22px;margin-bottom:19px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:19px}.panel h2{font-size:18px;margin:0}.panel h3{font-size:15px;margin:5px 0 12px}.grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}.barrow{margin-bottom:14px}.barrow .line{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:7px}.progress{height:9px;background:#e9eff5;border-radius:50px;overflow:hidden}.fill{background:#3485a8;height:100%;border-radius:50px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px}th{background:#f7f9fc;color:#6b8196;font-weight:750;text-align:left;padding:12px 10px;white-space:nowrap}td{padding:12px 10px;border-bottom:1px solid #edf0f4;vertical-align:middle}tr:last-child td{border-bottom:0}.tag{font-size:11px;border-radius:50px;padding:4px 9px;background:#e9f2f8;color:#21668b}.right{text-align:right}.empty{text-align:center;padding:28px;color:#758ba0}.actions{display:flex;gap:7px;flex-wrap:wrap}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:750;color:#4e657a}.field input,.field select{padding:11px 12px;border:1px solid #d6e1ea;border-radius:9px;background:white;color:#19304a;width:100%}.field.full{grid-column:1/-1}.modalback{position:fixed;inset:0;background:#132b46a6;display:flex;align-items:center;justify-content:center;padding:17px;z-index:20}.modal{width:min(650px,100%);max-height:92vh;overflow:auto;background:white;border-radius:16px;padding:25px;box-shadow:0 12px 55px #0003}.modal h2{margin:0 0 18px}.modalfoot{display:flex;justify-content:flex-end;gap:9px;margin-top:22px}.note{font-size:12px;color:#70869b;line-height:1.6}.accountgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.account{background:#f5f9fc;border:1px solid #e2ebf2;border-radius:12px;padding:15px}.account strong{display:block;font-size:19px;margin:8px 0}.pill{display:inline-block;background:#eff5f8;border-radius:30px;padding:5px 10px;color:#526f87;font-size:12px}.split{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.hide{display:none!important}@media(max-width:1050px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.accountgrid{grid-template-columns:1fr 1fr}}@media(max-width:700px){.app{display:block}.side{padding:17px}.brand{font-size:19px}.nav{display:flex;overflow:auto;margin-top:17px}.nav button{white-space:nowrap}.bottom{display:block;margin-top:12px;padding-top:10px;border-top:1px solid #38536c;font-size:12px}.bottom #cloudControls{display:block}.bottom #whoami{margin:0 0 8px;color:#e6f1fa}.bottom .cloudAdmin{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}.bottom .cloudAdmin button{padding:10px 12px;min-height:44px;touch-action:manipulation}.main{padding:20px 12px}.cards{gap:9px}.card{padding:14px}.card .value{font-size:19px}.panel{padding:15px}.formgrid,.accountgrid{grid-template-columns:1fr}.top h1{font-size:24px}}
+.authCover{position:fixed;inset:0;background:linear-gradient(145deg,#102943,#294d6a);display:flex;align-items:center;justify-content:center;z-index:1000;padding:20px}.authPanel{background:white;border-radius:18px;padding:28px;width:100%;max-width:440px;box-shadow:0 20px 50px #0004}.authPanel h1{margin:0 0 12px}.authPanel input{width:100%;padding:11px;margin:8px 0 12px;border:1px solid #cbd5e1;border-radius:8px}.authPanel button{width:100%;padding:12px;background:#155f86;color:white;border:0;border-radius:8px}.authPanel .error{color:#b42318}.cloudAdmin{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px} .cloudAdmin button{padding:9px 14px;border-radius:8px;border:1px solid #a5b4c4;background:white} @media(max-width:700px){.app{display:block}.side{padding:14px}.nav{display:flex;overflow-x:auto;margin-top:12px}.nav button{white-space:nowrap}.main{padding:16px!important}.top{display:block!important}.controls{margin-top:14px;display:flex;flex-wrap:wrap}.modal{max-height:90vh;overflow:auto}}
+
+/* HomeLedger violet & ivory design system */
+:root{--plum:#2b124a;--plum-deep:#1c0e35;--violet:#54307a;--violet-bright:#7048a3;--lavender:#eee7f6;--ivory:#f8f5ed;--ivory-card:#fcfaf5;--ink:#30223c;--soft-ink:#70637c;--line:#e7dfee;color:var(--ink);background:var(--ivory)}
+html{background:var(--ivory)}
+body{color:var(--ink);background-color:var(--ivory);background-image:radial-gradient(circle at 2px 2px,rgba(84,48,122,.045) .7px,transparent 1.2px),repeating-linear-gradient(35deg,rgba(139,113,87,.018) 0 1px,transparent 1px 6px),linear-gradient(135deg,#fbf9f2,#f3eee5);background-size:8px 8px,auto,auto;background-attachment:fixed}
+.side{background:linear-gradient(165deg,var(--plum-deep) 0%,var(--plum) 55%,#442263 100%);color:#f8f3ff}
+.brand small,.bottom{color:#c7b2dd}.nav button{color:#ddceed}.nav button.active,.nav button:hover{background:#644080;color:#fff}
+.main{background:transparent}.top h1,.panel h2,.panel h3{color:var(--plum-deep)}
+.eyebrow{color:#79579e}.muted,.note,.empty,.card .label,.card .foot{color:var(--soft-ink)}
+.btn{background:var(--violet);color:#fff}.btn:hover{background:#64408c}.btn.secondary{background:#fffcf7;color:var(--plum);border:1px solid #d9cde5}.btn.secondary:hover{background:var(--lavender)}
+.btn.danger{background:#fae8ec;color:#a72e50}
+.card,.panel{background:var(--ivory-card);border:1px solid var(--line);box-shadow:0 4px 22px rgba(44,22,70,.055)}
+.account{background:#f5f0e9;border-color:#e7ddeb}.account strong{color:var(--plum)}
+th{background:#f0eaf4;color:#654d79}td{border-bottom-color:#eae2e9}
+.tag,.pill{background:#eee5f4;color:#5a387c}
+.progress{background:#e9dff0}.fill{background:#8656ab}
+.barrow .fill{background:#8656ab!important}
+.field label{color:#5b456b}.field input,.field select,.field textarea{background:#fffdf8;color:var(--ink);border-color:#d7cbdc}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #a888cb;outline-offset:1px}
+.modalback{background:#201032b0}.modal,.authPanel{background:var(--ivory-card)}
+.authCover{background:radial-gradient(circle at 75% 20%,#694192,var(--plum) 52%,var(--plum-deep))}
+.authPanel button{background:var(--violet)}
+.cloudAdmin button{background:#f9f4ff;color:#35194d;border:1px solid #a58abd}.cloudAdmin button:hover{background:#e9daf5}
+.bottom{border-color:#6b488b!important}.bottom #whoami{color:#f8efff!important}
+#syncIndicator{background:var(--plum)!important}
+@media(max-width:700px){.side{background:linear-gradient(120deg,#21103b,#442061)}.main{background:transparent}}
+
+</style></head><body><div class="app"><aside class="side"><div class="brand">◈ HomeLedger<small>Household finance workspace</small></div><nav class="nav" id="nav"></nav><div class="bottom">October 2026 budget starter<br>Jamaican dollars (JMD)<br><br>Shared securely through Cloudflare. Changes synchronize across devices.</div></aside><main class="main"><div class="top"><div><div class="eyebrow" id="subhead">PERSONAL FINANCE</div><h1 id="pageTitle">Overview</h1><div class="muted" id="subtitle">Track every pay cycle, person and transaction.</div></div><div class="controls"><select id="cycleSelect" aria-label="Pay cycle" class="btn secondary"></select><button class="btn secondary" onclick="openCycle()">+ Pay cycle</button><button id="closeCycleButton" class="btn secondary" onclick="toggleCycleClosed()" style="display:none">Close pay cycle</button><button id="deleteCycleButton" class="btn danger" onclick="deletePayCycle()" style="display:none">Delete pay cycle</button><button class="btn" onclick="openTransaction()">+ Transaction</button></div></div><div id="content"></div></main></div><div id="modalRoot"></div><div id="authRoot"></div><div id="syncIndicator" style="position:fixed;right:14px;bottom:10px;background:#112a44;color:#fff;border-radius:8px;padding:6px 10px;font-size:12px;z-index:10;display:none"></div><input type="file" id="importFile" accept="application/json,.json" hidden><script>
+const KEY='homeledger_oct2026_v1';const curr=n=>new Intl.NumberFormat('en-JM',{style:'currency',currency:'JMD',maximumFractionDigits:0}).format(Number(n)||0);const money=n=>Math.round((Number(n)||0)*100)/100;const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));const uid=()=>Math.random().toString(36).slice(2,11)+Date.now().toString(36);const seedGroups=[]; // Financial records are loaded from the protected API, not public frontend assets.
+function initial(){let people=[{id:'marsha',name:'Marsha'},{id:'darren',name:'Darren'}];let items=seedGroups.flatMap(([category,arr])=>arr.map(([name,budget])=>({id:uid(),category,name,budgets:{marsha:budget}})));return {version:1,people,accounts:[{id:'main',name:'Primary bank account',personId:'marsha',opening:0}],cycles:[{id:'oct26',name:'October 2026',month:'2026-10',start:'2026-10-01',end:'2026-10-31',opening:{main:0},incomeEstimates:[],paymentGroups:[],itemBudgets:Object.fromEntries(items.map(i=>[i.id,{...i.budgets}])),transactions:[]}],items,currentCycleId:'oct26'} }
+function valid(d){return d&&Array.isArray(d.people)&&Array.isArray(d.accounts)&&Array.isArray(d.cycles)&&Array.isArray(d.items)}let state=initial();let view='Overview';const pages=['Overview','Budget items','Transactions','Income & pay','Accounts & people','Payment groups','Reports','Source report','Compare cycles'];let memberCycleId=null;const cy=()=>state.cycles.find(c=>c.id===(currentUser?.role==='member'&&memberCycleId?memberCycleId:state.currentCycleId))||state.cycles[0];const person=id=>state.people.find(p=>p.id===id)?.name||'Household';const account=id=>state.accounts.find(a=>a.id===id);let cloudVersion=0, saveTimer=null, saveRunning=false, dirty=false, blocked=false;
+const api=async(path,method='GET',data)=>{let res=await fetch('/api'+path,{method,credentials:'same-origin',headers:{'Content-Type':'application/json'},body:data===undefined?undefined:JSON.stringify(data)});let value=await res.json();if(!res.ok)throw Object.assign(new Error(value.error||'Network error'),{status:res.status});return value};
+const syncLabel=text=>{let x=document.getElementById('syncIndicator');x.textContent=text;x.style.display='block'};
+const save=()=>{dirty=true;if(blocked)return;syncLabel('Unsaved changes');clearTimeout(saveTimer);saveTimer=setTimeout(flushSave,350)};
+async function flushSave(){if(blocked||saveRunning||!dirty)return;saveRunning=true;dirty=false;let payload=structuredClone(state);try{let r=await api('/state','PUT',{state:payload,version:cloudVersion});cloudVersion=r.version;syncLabel('Saved to cloud')}catch(e){blocked=true;dirty=true;syncLabel('Sync stopped — reload required');alert(e.message+' Your unsaved changes remain on this screen. Export a backup before reloading.')}finally{saveRunning=false;if(dirty&&!blocked)saveTimer=setTimeout(flushSave,150)}};
+;const income=(c=cy())=>c.transactions.filter(t=>t.type==='income').reduce((n,t)=>n+money(t.amount),0);const expenses=(c=cy())=>c.transactions.filter(t=>t.type==='expense').reduce((n,t)=>n+money(t.amount),0);const estimates=(c=cy())=>c.incomeEstimates.reduce((n,e)=>n+money(e.amount),0);const budget=(c=cy())=>state.items.reduce((n,i)=>n+Object.values(c.itemBudgets[i.id]||{}).reduce((a,b)=>a+money(b),0),0);const spent=(id,c=cy())=>c.transactions.filter(t=>t.type==='expense'&&t.itemId===id).reduce((n,t)=>n+money(t.amount),0);const itemBudget=(id,c=cy())=>Object.values(c.itemBudgets[id]||{}).reduce((a,b)=>a+money(b),0);const balances=(c=cy())=>state.accounts.map(a=>({...a,balance:money(c.opening[a.id])+c.transactions.filter(t=>t.accountId===a.id).reduce((s,t)=>s+(t.type==='income'?money(t.amount):-money(t.amount)),0)}));const getItem=id=>state.items.find(i=>i.id===id);const opts=(arr,sel,fn)=>arr.map(o=>`<option value="${esc(o.id)}" ${o.id===sel?'selected':''}>${esc(fn?fn(o):o.name)}</option>`).join('');function render(){const lock=document.getElementById('closeCycleButton');if(lock){lock.style.display=currentUser?.role==='admin'?'inline-block':'none';lock.textContent=cy().closed?'Reopen pay cycle':'Close pay cycle'}const del=document.getElementById('deleteCycleButton');if(del)del.style.display=currentUser?.role==='admin'?'inline-block':'none';document.getElementById('nav').innerHTML=pages.map(p=>`<button class="${p===view?'active':''}" onclick="navTo('${p}')">${p}</button>`).join('');document.getElementById('cycleSelect').innerHTML=opts(state.cycles,cy().id,c=>c.name);document.getElementById('pageTitle').textContent=view;document.getElementById('subhead').textContent=cy().name;const summaries={Overview:'A clear picture of your household cash flow.', 'Budget items':'October worksheet categories with item-level tracking.','Transactions':'Daily income and expenses across household accounts.','Income & pay':'Track estimated pay against deposits received.','Accounts & people':'Manage bank opening balances and household members.','Payment groups':'Combined monthly payments for household members.','Reports':'Income and expense reports by cycle and member.','Source report':'Transaction totals by cash, debit card, ACH or credit card.','Compare cycles':'Compare income, spending and budgets over time.'};document.getElementById('subtitle').textContent=summaries[view];document.getElementById('content').innerHTML=({Overview:overview,'Budget items':itemsPage,Transactions:transactionsPage,'Income & pay':incomePage,'Accounts & people':accountsPage,'Payment groups':paymentGroupsPage,'Reports':reportsPage,'Source report':sourceReportPage,'Compare cycles':comparePage}[view])();if(view==='Reports')wireReportFilters();if(view==='Source report')wireSourceReport();document.getElementById('cycleSelect').onchange=e=>{if(currentUser?.role==='member'){memberCycleId=e.target.value;render()}else{state.currentCycleId=e.target.value;save();render()}}}function navTo(p){view=p;render()}function totals(){return `<div class="cards"><div class="card"><div class="label">Estimated income</div><div class="value">${curr(estimates())}</div><div class="foot">Planned household pay</div></div><div class="card"><div class="label">Actual income</div><div class="value green">${curr(income())}</div><div class="foot">Deposits recorded</div></div><div class="card"><div class="label">Budgeted outflows</div><div class="value">${curr(budget())}</div><div class="foot">Expenses and savings targets</div></div><div class="card"><div class="label">Actual outflows</div><div class="value red">${curr(expenses())}</div><div class="foot">Recorded expenses and savings</div></div></div>`}
+function overview(){let groups=[...new Set(state.items.map(i=>i.category))];let ac=balances();return totals()+paymentGroupSummary()+`<div class="grid2"><section class="panel"><div class="panelhead"><h2>Spending by category</h2><button class="btn secondary small" onclick="navTo('Budget items')">View items</button></div>${groups.map(g=>{let its=state.items.filter(i=>i.category===g),b=its.reduce((n,i)=>n+itemBudget(i.id),0),s=its.reduce((n,i)=>n+spent(i.id),0);return `<div class="barrow"><div class="line"><strong>${esc(g)}</strong><span>${curr(s)} / ${curr(b)}</span></div><div class="progress"><div class="fill" style="width:${b?Math.min(100,s/b*100):0}%;background:${s>b?'#c96060':'#8656ab'}"></div></div></div>`}).join('')}</section><section class="panel"><div class="panelhead"><h2>Bank balances</h2><button class="btn secondary small" onclick="navTo('Accounts & people')">Manage</button></div>${ac.map(a=>`<div class="account" style="margin-bottom:12px"><span class="muted">${esc(a.name)} · ${esc(person(a.personId))}</span><strong class="${a.balance<0?'red':'green'}">${curr(a.balance)}</strong><span class="note">Opening ${curr(cy().opening[a.id]||0)} + deposits − outflows</span></div>`).join('')}<div class="account"><div class="muted">Combined closing balance</div><strong>${curr(ac.reduce((s,a)=>s+a.balance,0))}</strong></div></section></div><section class="panel"><div class="panelhead"><h2>Recent activity</h2><button class="btn secondary small" onclick="navTo('Transactions')">All activity</button></div>${transTable(cy().transactions.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,7),false)}</section>`}
+let showHiddenBudgetItems=false;
+function toggleHiddenBudgetItems(){if(currentUser?.role!=='admin')return;showHiddenBudgetItems=!showHiddenBudgetItems;render()}
+function toggleBudgetItemHidden(id){if(!assertCycleOpen())return;if(currentUser?.role!=='admin')return;const item=getItem(id);if(!item)return;item.hidden=!item.hidden;save();render()}
+function itemsPage(){const admin=currentUser?.role==='admin';const hiddenCount=state.items.filter(i=>i.hidden).length;const groups=[...new Set(state.items.filter(i=>Object.hasOwn(cy().itemBudgets,i.id)&&(!i.hidden||(admin&&showHiddenBudgetItems))).map(i=>i.category))];return totals()+`<div class="panel"><div class="panelhead"><h2>Item budgets and transactions</h2><div class="split"><button class="btn secondary small" onclick="openCategory()">+ Category</button><button class="btn small" onclick="openItem()">+ Budget item</button>${admin?`<button class="btn secondary small" onclick="restoreTemplateItem()">+ From template</button>`:''}${admin?`<button class="btn secondary small" onclick="toggleHiddenBudgetItems()">${showHiddenBudgetItems?'Hide hidden items':'Show hidden items'} (${hiddenCount})</button>`:''}</div></div><p class="note">Hidden budget items remain in the total budget, actual expenses and transaction records. Click “Edit budget” to set an amount for each household member. “Add expense” records any number of payments against the item.</p>${groups.map(g=>{let its=state.items.filter(i=>i.category===g&&Object.hasOwn(cy().itemBudgets,i.id)&&(!i.hidden||(admin&&showHiddenBudgetItems)));return `<h3 style="margin-top:25px">${esc(g)} <span class="pill">${curr(its.reduce((n,i)=>n+itemBudget(i.id),0))} budget</span></h3><div class="tablewrap"><table><thead><tr><th>Budget item</th><th>Budget by person</th><th class="right">Budgeted</th><th class="right">Actual</th><th class="right">Remaining</th><th>Actions</th></tr></thead><tbody>${its.map(i=>{let b=itemBudget(i.id),s=spent(i.id),names=state.people.map(p=>`${p.name} ${curr((cy().itemBudgets[i.id]||{})[p.id]||0)}`).join(' · ');return `<tr><td><strong>${esc(i.name)}</strong>${i.hidden?' <span class="pill">Hidden</span>':''}</td><td>${esc(names||'—')}</td><td class="right">${curr(b)}</td><td class="right">${curr(s)}</td><td class="right ${b-s<0?'red':'green'}">${curr(b-s)}</td><td><div class="actions"><button class="btn secondary small" onclick="openBudget('${i.id}')">Edit budget</button><button class="btn small" onclick="openTransaction('expense','${i.id}')">Add expense</button><button class="btn secondary small" onclick="openItem('${i.id}')">Edit item</button>${admin?`<button class="btn secondary small" onclick="toggleBudgetItemHidden('${i.id}')">${i.hidden?'Unhide':'Hide'}</button><button class="btn secondary small" onclick="omitBudgetItem('${i.id}')">Remove from cycle</button><button class="btn secondary small" onclick="editItemTemplate('${i.id}')">Template cost</button>`:''}</div></td></tr>`}).join('')}</tbody></table></div>`}).join('')}</div>`}
+
+
+function paymentGroupSummary(){
+ const gs=cy().paymentGroups||[];
+ if(!gs.length)return '';
+ return '<section class="panel"><div class="panelhead"><h2>Payments assigned this cycle</h2><button class="btn secondary small" onclick="navTo(\'Payment groups\')">View breakdown</button></div><div class="accountgrid">'+gs.map(g=>{
+  const total=g.totalAmount??g.lines.reduce((s,l)=>s+money(l.amount),0);
+  const paid=g.paidAmount??cy().transactions.filter(t=>t.batchId===g.id).reduce((s,t)=>s+money(t.amount),0);
+  const credit=(g.adjustments||[]).reduce((n,x)=>n+money(x.amount),0);
+  return '<div class="account"><span class="muted">'+esc(person(g.personId))+' · '+esc(g.name)+'</span><strong>'+curr(Math.max(0,total-paid-credit))+' due</strong><span class="muted">Group '+curr(total)+' · Credits '+curr(credit)+'</span><button class="btn secondary small" onclick="navTo(\'Payment groups\')">Details</button></div>';
+ }).join('')+'</div></section>';
+}
+function ensureItemTemplates(){
+ if(currentUser?.role!=='admin')return;
+ if(!state.itemTemplates)state.itemTemplates={};
+ for(const item of state.items){
+  if(state.itemTemplates[item.id])continue;
+  const latest=state.cycles.slice().reverse().find(c=>Object.hasOwn(c.itemBudgets||{},item.id));
+  const values=latest?.itemBudgets[item.id]||{};
+  state.itemTemplates[item.id]={name:item.name,category:item.category,amounts:structuredClone(values)};
+ }
+}
+function omitBudgetItem(id){if(!assertCycleOpen())return;
+ if(currentUser?.role!=='admin')return;
+ if(!getItem(id)||!Object.hasOwn(cy().itemBudgets,id))return;
+ if(cy().transactions.some(t=>t.itemId===id))return alert('This item has transactions in this cycle and cannot be removed. Its history is preserved.');
+ if((cy().paymentGroups||[]).some(g=>g.lines.some(l=>l.itemId===id)))return alert('Remove this item from its payment group first.');
+ ensureItemTemplates();
+ state.itemTemplates[id]={name:getItem(id).name,category:getItem(id).category,amounts:structuredClone(cy().itemBudgets[id])};
+ if(confirm('Remove this item only from '+cy().name+'? The template remains available for later cycles.')){
+  delete cy().itemBudgets[id];save();render();
+ }
+}
+function restoreTemplateItem(){if(!assertCycleOpen())return;
+ if(currentUser?.role!=='admin')return;
+ ensureItemTemplates();
+ const absent=state.items.filter(i=>!Object.hasOwn(cy().itemBudgets,i.id));
+ if(!absent.length)return alert('All saved budget items are already in this pay cycle.');
+ modal('Add budget item from templates',
+  select('Saved template','itemId',absent.map(i=>({id:i.id,name:i.category+' — '+i.name+' · '+curr(Object.values(state.itemTemplates[i.id]?.amounts||{}).reduce((s,n)=>s+money(n),0))})),absent[0].id)+
+  '<div class="field full"><p class="note">Saved default amounts will be restored to this pay cycle. Existing cycles remain unchanged.</p></div>',
+  v=>{
+   const item=absent.find(i=>i.id===v.itemId);if(!item)throw Error('Choose an available item.');
+   cy().itemBudgets[item.id]=structuredClone(state.itemTemplates[item.id]?.amounts||{});
+  });
+}
+function editItemTemplate(id){if(!assertCycleOpen())return;
+ if(currentUser?.role!=='admin')return;
+ ensureItemTemplates();
+ const item=getItem(id),t=state.itemTemplates[id];if(!item)return;
+ modal('Saved template — '+item.name,state.people.map(p=>field(p.name+' default cost','t_'+p.id,'number',t.amounts?.[p.id]||0)).join(''),v=>{
+ const amounts=Object.fromEntries(state.people.map(p=>[p.id,money(v['t_'+p.id])]));
+ if(Object.values(amounts).some(n=>n<0))throw Error('Enter non-negative costs.');
+ t.name=item.name;t.category=item.category;t.amounts=amounts;
+ });
+}
+
+
+async function creditPaymentGroup(id){
+ if(currentUser?.role!=='admin'||!assertCycleOpen())return;
+ const g=(cy().paymentGroups||[]).find(x=>x.id===id);if(!g)return;
+ const total=g.lines.reduce((n,l)=>n+money(l.amount),0);
+ const paid=g.paidAmount??cy().transactions.filter(t=>t.batchId===id).reduce((n,t)=>n+money(t.amount),0);
+ const credit=(g.adjustments||[]).reduce((n,x)=>n+money(x.amount),0),due=Math.max(0,total-paid-credit);
+ const raw=prompt('Manual payment credit for '+g.name+' (outstanding '+curr(due)+'). Enter credit amount in JMD:',String(due));
+ if(raw===null)return;
+ const amount=Number(raw);if(!Number.isFinite(amount)||amount<=0||amount>due)return alert('Enter an amount between 0 and '+curr(due));
+ const date=prompt('Date of credit (YYYY-MM-DD):',cy().start);if(date===null)return;
+ if(date<cy().start||date>cy().end)return alert('Date must be within this pay cycle.');
+ const note=prompt('Payment reference / explanation (optional):','');if(note===null)return;
+ if(!confirm('Apply '+curr(amount)+' credit to '+g.name+'? This reduces the amount due but does not record an expense or bank withdrawal.'))return;
+ try{
+  await flushSave();if(dirty||blocked)throw Error('Unsaved changes. Reload before posting a credit.');
+  await api('/payment-groups/adjust','POST',{cycleId:cy().id,groupId:id,date,amount,note,version:cloudVersion});
+  location.reload();
+ }catch(e){alert(e.message)}
+}
+let reportCycleId=null,reportPersonId='household',householdSummary=null,reportLoadKey='',reportLoading=false;
+async function fetchHouseholdSummary(cycleId){
+ if(reportLoading&&reportLoadKey===cycleId)return;
+ reportLoadKey=cycleId;reportLoading=true;householdSummary=null;
+ try{const data=await api('/reports/summary?cycleId='+encodeURIComponent(cycleId));if(reportLoadKey===cycleId){householdSummary=data;reportLoading=false;if(view==='Reports')render()}}
+ catch(e){if(reportLoadKey===cycleId){reportLoading=false;householdSummary={error:e.message};if(view==='Reports')render()}}
+}
+
+function memberSummaryReport(){
+ const cycle=state.cycles.find(x=>x.id===reportCycleId)||cy(),data=householdSummary;
+ if(reportLoadKey!==cycle.id&&!reportLoading)fetchHouseholdSummary(cycle.id);
+ let scopes=data?.people||[];
+ const selected=reportPersonId==='household'?scopes:scopes.filter(p=>p.id===reportPersonId);
+ const metrics=['estimatedIncome','actualIncome','budgetedExpenses','actualExpenses','groupOutstanding'];
+ const captions=['Estimated income','Actual income','Budgeted expenses','Actual expenses','Group outstanding'];
+ const totals=metrics.map(key=>selected.reduce((n,p)=>n+Number(p[key]||0),0));
+ const selector=select('Pay cycle','reportCycle',state.cycles.map(x=>({id:x.id,name:x.name})),cycle.id);
+ const peopleSelect=select('Report for','reportPerson',[{id:'household',name:'Combined household'},...scopes.map(p=>({id:p.id,name:p.name}))],reportPersonId);
+ return '<section class="panel"><div class="panelhead"><h2>Budget summary report</h2><button class="btn secondary small" onclick="window.print()">Print / Save PDF</button></div><div class="formgrid">'+selector+peopleSelect+'</div>'+
+ (data?.error?'<p class="note">'+esc(data.error)+'</p>':!data||data.cycle?.id!==cycle.id?'<p class="note">Loading household summary…</p>':
+ '<h3>'+esc(cycle.name)+' · '+esc(reportPersonId==='household'?'Combined household':selected[0]?.name||'Profile')+'</h3><div class="cards">'+metrics.map((k,i)=>'<div class="card"><div class="label">'+captions[i]+'</div><div class="value">'+curr(totals[i])+'</div></div>').join('')+
+ '<div class="card"><div class="label">Net actual cash flow</div><div class="value">'+curr(totals[1]-totals[3])+'</div></div></div>'+
+ '<p class="note">This report shows summary amounts only. Item names, hidden allocations, and individual transactions remain private to their assigned member and the administrator.</p>')+'</section>';
+}
+function reportsPage(){if(currentUser?.role==='member')return memberSummaryReport();
+ const c=state.cycles.find(x=>x.id===reportCycleId)||cy();
+ const admin=currentUser?.role==='admin',pid=admin?reportPersonId:state.people[0]?.id;
+ const people=pid==='household'?state.people:state.people.filter(p=>p.id===pid);
+ const ids=new Set(people.map(p=>p.id)),tx=c.transactions.filter(t=>ids.has(t.personId));
+ const sum=(arr)=>arr.reduce((a,x)=>a+money(x.amount),0);
+ const estimates=sum(c.incomeEstimates.filter(x=>ids.has(x.personId)));
+ const income=!admin&&c.reportTotals?c.reportTotals.income:sum(tx.filter(t=>t.type==='income')),expense=!admin&&c.reportTotals?c.reportTotals.expenses:sum(tx.filter(t=>t.type==='expense'));
+ const budgeted=state.items.reduce((a,i)=>a+people.reduce((n,p)=>n+money(c.itemBudgets?.[i.id]?.[p.id]),0),0);
+ const gs=(c.paymentGroups||[]).filter(g=>ids.has(g.personId));
+ const due=gs.reduce((s,g)=>s+Math.max(0,(g.totalAmount??g.lines.reduce((n,l)=>n+money(l.amount),0))-(g.paidAmount??sum(c.transactions.filter(t=>t.batchId===g.id)))-sum(g.adjustments||[])),0);
+ const metrics=[['Estimated income',estimates],['Actual income',income],['Budgeted expenses',budgeted],['Actual expenses',expense],['Net cash flow',income-expense],['Payment groups outstanding',due]];
+ const rows=state.items.filter(i=>Object.hasOwn(c.itemBudgets||{},i.id)&&(!i.hidden||admin)).map(i=>{
+ const b=people.reduce((n,p)=>n+money(c.itemBudgets[i.id]?.[p.id]),0),spent=sum(tx.filter(t=>t.type==='expense'&&t.itemId===i.id));
+ return '<tr><td>'+esc(i.category)+'</td><td>'+esc(i.name)+'</td><td class="right">'+curr(b)+'</td><td class="right">'+curr(spent)+'</td></tr>';
+ }).join('');
+ return '<section class="panel"><div class="panelhead"><h2>Financial report</h2><button class="btn secondary small" onclick="window.print()">Print / Save PDF</button></div><div class="formgrid">'+
+ select('Pay cycle','reportCycle',state.cycles.map(x=>({id:x.id,name:x.name})),c.id)+
+ (admin?select('Scope','reportPerson',[{id:'household',name:'Entire household'},...state.people.map(p=>({id:p.id,name:p.name}))],pid):'<p class="note">Personal report</p>')+'</div><h3>'+esc(c.name)+'</h3><div class="cards">'+metrics.map(([name,amount])=>'<div class="card"><div class="label">'+name+'</div><div class="value">'+curr(amount)+'</div></div>').join('')+'</div><h3>Item breakdown</h3><div class="tablewrap"><table><thead><tr><th>Category</th><th>Item</th><th class="right">Budget</th><th class="right">Actual</th></tr></thead><tbody>'+rows+'</tbody></table></div></section>';
+}
+function wireReportFilters(){
+ const a=document.querySelector('[name="reportCycle"]'),b=document.querySelector('[name="reportPerson"]');
+ if(a)a.onchange=e=>{reportCycleId=e.target.value;householdSummary=null;reportLoadKey='';render()};
+ if(b)b.onchange=e=>{reportPersonId=e.target.value;render()};
+}
+
+function paymentGroupsPage(){
+ const gs=cy().paymentGroups||[];
+ return '<section class="panel"><div class="panelhead"><h2>Monthly payment groups</h2>'+(currentUser?.role==='admin'?'<button class="btn small" onclick="editPaymentGroup()">+ Create group</button>':'')+'</div><p class="note">A single payment action posts linked expense allocations once, while preserving each item in spending reports.</p>'+
+ (gs.length?gs.map(g=>{
+ const total=g.totalAmount??g.lines.reduce((n,l)=>n+money(l.amount),0),paid=cy().transactions.filter(t=>t.batchId===g.id),paidAmount=g.paidAmount??paid.reduce((n,t)=>n+money(t.amount),0),credit=(g.adjustments||[]).reduce((n,x)=>n+money(x.amount),0),due=Math.max(0,total-paidAmount-credit);
+ return '<div class="account" style="margin:14px 0"><h3>'+esc(g.name)+' — '+curr(due)+' due</h3><p class="note">Original '+curr(total)+' · Credits '+curr(credit)+' · Paid '+curr(paidAmount)+'</p><p class="muted">Assigned to '+esc(person(g.personId))+'</p><div class="tablewrap"><table><tbody>'+
+ g.lines.filter(l=>currentUser?.role==='admin'||!getItem(l.itemId)?.hidden).map(l=>'<tr><td>'+esc(getItem(l.itemId)?.name||'Item')+'</td><td class="right">'+curr(l.amount)+'</td></tr>').join('')+
+ '</tbody></table></div><p><strong>'+(paidAmount?'Paid '+curr(paidAmount):'Awaiting payment')+'</strong></p><div class="actions">'+
+ (currentUser?.role==='admin'&&!paidAmount&&!credit?'<button class="btn secondary small" onclick="editPaymentGroup(\''+g.id+'\')">Edit</button><button class="btn danger small" onclick="removePaymentGroup(\''+g.id+'\')">Remove</button>':'')+
+ (!paidAmount&&total>0&&!cy().closed?'<button class="btn small" onclick="payPaymentGroup(\''+g.id+'\')">Record full payment ('+curr(total)+')</button>':'')+(currentUser?.role==='admin'&&due>0?'<button class="btn secondary small" onclick="creditPaymentGroup(\''+g.id+'\')">Manual credit</button>':'')+'</div></div>'
+ }).join(''):'<p class="empty">No payment groups for this pay cycle.</p>')+'</section>';
+}
+function editPaymentGroup(id){if(!assertCycleOpen())return;
+ if(currentUser?.role!=='admin')return;
+ const g=(cy().paymentGroups||[]).find(x=>x.id===id),who=g?.personId||state.people[0]?.id;
+ let rows=state.items.map(i=>{const line=g?.lines.find(l=>l.itemId===i.id);return '<div class="field full"><label><input style="width:auto" type="checkbox" name="use_'+esc(i.id)+'" '+(line?'checked':'')+'> '+esc(i.category)+' — '+esc(i.name)+'</label>'+field('Group allocation (JMD)','amt_'+i.id,'number',line?.amount??cy().itemBudgets[i.id]?.[who]??0)+'</div>'}).join('');
+ modal(g?'Edit payment group':'Create payment group',field('Group name','name','text',g?.name||'Monthly contribution','required')+select('Assigned member','personId',peopleOpts(),who)+'<div class="field full"><strong>Choose budget items and payment amounts</strong></div>'+rows,v=>{
+ const lines=state.items.filter(i=>v['use_'+i.id]).map(i=>({itemId:i.id,amount:Number(v['amt_'+i.id])}));
+ if(!v.name.trim()||!state.people.some(p=>p.id===v.personId)||!lines.length)throw Error('Choose a name, person and items.');
+ if(lines.some(l=>!Number.isFinite(l.amount)||l.amount<=0))throw Error('Selected items require a positive amount.');
+ if(lines.some(l=>(cy().paymentGroups||[]).some(o=>o.id!==id&&o.personId===v.personId&&o.lines.some(x=>x.itemId===l.itemId))))throw Error('One of these items is already grouped for this person.');
+ if(g){Object.assign(g,{name:v.name.trim(),personId:v.personId,lines})}else{(cy().paymentGroups??=[]).push({id:uid(),name:v.name.trim(),personId:v.personId,lines})}
+ });
+}
+function removePaymentGroup(id){if(!assertCycleOpen())return;if(currentUser?.role!=='admin')return;if(cy().transactions.some(t=>t.batchId===id))return alert('Already paid.');if(confirm('Remove group without deleting budget items?')){cy().paymentGroups=cy().paymentGroups.filter(g=>g.id!==id);save();render()}}
+async function payPaymentGroup(id){
+ if(!assertCycleOpen())return;
+ const g=(cy().paymentGroups||[]).find(x=>x.id===id);if(!g)return;
+ const total=g.totalAmount??g.lines.reduce((n,l)=>n+money(l.amount),0);
+ const credits=(g.adjustments||[]).reduce((n,x)=>n+money(x.amount),0);
+ const paid=g.paidAmount??cy().transactions.filter(t=>t.batchId===id).reduce((n,t)=>n+money(t.amount),0);
+ const amount=money(total-paid);const transferReference=Math.max(0,money(total-credits-paid));
+ if(paid>0||amount<=0)return alert('This payment group has already been posted or has no original amount to record.');
+ const accounts=state.accounts.filter(a=>a.personId===g.personId);
+ if(!accounts.length)return alert('An account assigned to '+person(g.personId)+' is required.');
+ const date=prompt('Payment date for '+g.name+' (YYYY-MM-DD):',cy().start);
+ if(date===null)return;
+ if(date<cy().start||date>cy().end)return alert('Payment date must be inside this pay cycle.');
+ const accountMenu=accounts.map((a,i)=>(i+1)+'. '+a.name).join('\n');
+ const selection=prompt('Select the account to record the ACH payment against:\n'+accountMenu,'1');
+ if(selection===null)return;
+ const account=accounts[Number(selection)-1];
+ if(!account)return alert('Invalid account selection.');
+ const sourceNickname=prompt('ACH source nickname (optional):','');
+ if(sourceNickname===null)return;
+ if(!confirm('Record full ACH obligation of '+curr(amount)+' for '+g.name+'?\nFull amount recorded in HomeLedger: '+curr(amount)+'\nManual credit (display only): '+curr(credits)+'\nExpected external transfer: '+curr(transferReference)+'\nThe full item costs will be posted in the app and reduce the selected account balance.'))return;
+ try{
+  await flushSave();
+  if(dirty||blocked)throw Error('Unsaved changes. Reload before paying.');
+  await api('/payment-groups/pay','POST',{groupId:id,cycleId:cy().id,accountId:account.id,date,sourceNickname,version:cloudVersion});
+  location.reload();
+ }catch(e){alert(e.message)}
+}
+
+const sourceLabel={debit:'Debit card',cash:'Cash',ach:'ACH / bank transfer',credit:'Credit card'};
+function transactionSource(t){return (sourceLabel[t.sourceType]||'Unspecified')+(t.sourceNickname?' — '+t.sourceNickname:'')}
+let sourceReportCycleId=null,sourceReportFilter='all';
+function sourceReportPage(){
+ const cycle=state.cycles.find(x=>x.id===sourceReportCycleId)||cy();
+ const rows=cycle.transactions.filter(t=>currentUser?.role==='admin'||!getItem(t.itemId)?.hidden);
+ const labels=[...new Set(rows.map(transactionSource))].sort();
+ const filtered=rows.filter(t=>sourceReportFilter==='all'||transactionSource(t)===sourceReportFilter);
+ const buckets=labels.map(name=>{const ts=rows.filter(t=>transactionSource(t)===name);return {name,count:ts.length,income:ts.filter(t=>t.type==='income').reduce((n,t)=>n+money(t.amount),0),expenses:ts.filter(t=>t.type==='expense').reduce((n,t)=>n+money(t.amount),0)}});
+ const all=filtered.reduce((n,t)=>n+(t.type==='income'?money(t.amount):-money(t.amount)),0);
+ return '<section class="panel"><div class="panelhead"><h2>Transactions by source</h2><button class="btn secondary small" onclick="window.print()">Print / Save PDF</button></div><div class="formgrid">'+
+ select('Pay cycle','sourceReportCycle',state.cycles.map(x=>({id:x.id,name:x.name})),cycle.id)+
+ select('Payment source','sourceReportSource',[{id:'all',name:'All sources'},...labels.map(x=>({id:x,name:x}))],sourceReportFilter)+
+ '</div><p class="note">All payment sources can be separated by nickname. Historic transactions without a source are labelled Unspecified. Transactions remain scoped to your assigned household profile.</p>'+
+ '<div class="tablewrap"><table><thead><tr><th>Source</th><th class="right">Transactions</th><th class="right">Income</th><th class="right">Expenses</th></tr></thead><tbody>'+buckets.map(b=>'<tr><td>'+esc(b.name)+'</td><td class="right">'+b.count+'</td><td class="right">'+curr(b.income)+'</td><td class="right">'+curr(b.expenses)+'</td></tr>').join('')+'</tbody></table></div><h3>Selected transactions · net '+curr(all)+'</h3>'+transTable(filtered.slice().sort((a,b)=>b.date.localeCompare(a.date)),false)+'</section>';
+}
+function wireSourceReport(){
+ const a=document.querySelector('[name="sourceReportCycle"]'),b=document.querySelector('[name="sourceReportSource"]');
+ if(a)a.onchange=e=>{sourceReportCycleId=e.target.value;sourceReportFilter='all';render()};
+ if(b)b.onchange=e=>{sourceReportFilter=e.target.value;render()};
+}
+
+function transTable(ts,edit=true){return ts.length?`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Type</th><th>Item / source</th><th>Member</th><th>Bank account</th><th>Source</th><th>Notes</th><th class="right">Amount</th>${edit?'<th></th>':''}</tr></thead><tbody>${ts.map(t=>`<tr><td>${esc(t.date)}</td><td><span class="tag">${t.type==='income'?'Income':'Expense'}</span></td><td>${esc(t.type==='income'?t.label:(getItem(t.itemId)?.name||t.label||'Other'))}</td><td>${esc(person(t.personId))}</td><td>${esc(account(t.accountId)?.name||'Unknown account')}</td><td>${esc(transactionSource(t))}</td><td>${esc(t.note||'—')}</td><td class="right ${t.type==='income'?'green':'red'}">${t.type==='income'?'+':'−'}${curr(t.amount)}</td>${edit?`<td><div class="actions"><button class="btn secondary small" onclick="openTransaction(null,null,'${t.id}')">Edit</button><button class="btn danger small" onclick="deleteTransaction('${t.id}')">Delete</button></div></td>`:''}</tr>`).join('')}</tbody></table></div>`:'<div class="empty">No transactions yet. Add a salary deposit or expense to begin.</div>'}
+function transactionsPage(){return `<section class="panel"><div class="panelhead"><h2>Daily transaction ledger</h2><div class="split"><button class="btn secondary small" onclick="openTransaction('income')">+ Income</button><button class="btn small" onclick="openTransaction('expense')">+ Expense</button></div></div>${transTable(cy().transactions.slice().sort((a,b)=>b.date.localeCompare(a.date)))}</section>`}
+function incomePage(){return `<div class="cards"><div class="card"><div class="label">Estimated household income</div><div class="value">${curr(estimates())}</div></div><div class="card"><div class="label">Actual deposits</div><div class="value green">${curr(income())}</div></div><div class="card"><div class="label">Income difference</div><div class="value ${income()-estimates()<0?'red':'green'}">${curr(income()-estimates())}</div></div><div class="card"><div class="label">After actual expenses</div><div class="value">${curr(income()-expenses())}</div></div></div><div class="panel"><div class="panelhead"><h2>Estimated salary and income sources</h2><button class="btn small" onclick="openIncomeEstimate()">+ Income estimate</button></div><div class="tablewrap"><table><thead><tr><th>Household member</th><th>Income source</th><th class="right">Estimated</th><th class="right">Actual received (matching deposits)</th><th></th></tr></thead><tbody>${cy().incomeEstimates.map(i=>{let actual=cy().transactions.filter(t=>t.type==='income'&&t.incomeEstimateId===i.id).reduce((s,t)=>s+money(t.amount),0);return `<tr><td>${esc(person(i.personId))}</td><td>${esc(i.name)}</td><td class="right">${curr(i.amount)}</td><td class="right">${curr(actual)}</td><td><div class="actions"><button class="btn secondary small" onclick="openIncomeEstimate('${i.id}')">Edit</button><button class="btn small" onclick="openTransaction('income',null,null,'${i.id}')">Record deposit</button></div></td></tr>`}).join('')}</tbody></table></div><p class="note">Unlinked deposits are included in actual income but not attributed to a specific salary estimate.</p></div><section class="panel"><div class="panelhead"><h2>Actual income deposits</h2><button class="btn small" onclick="openTransaction('income')">+ Actual income</button></div>${transTable(cy().transactions.filter(t=>t.type==='income').slice().sort((a,b)=>b.date.localeCompare(a.date)))}</section>`}
+function accountsPage(){return `<section class="panel"><div class="panelhead"><h2>Household members</h2><button class="btn small" onclick="openPerson()">+ Member</button></div><div class="split">${state.people.map(p=>`<div class="account"><strong>${esc(p.name)}</strong><button class="btn secondary small" onclick="openPerson('${p.id}')">Rename</button></div>`).join('')}</div></section><section class="panel"><div class="panelhead"><h2>Bank accounts and opening balances</h2><button class="btn small" onclick="openAccount()">+ Bank account</button></div><p class="note">Set the opening balance at the beginning of each pay cycle. Every transaction then updates the running balance of its selected account.</p><div class="accountgrid">${balances().map(a=>`<div class="account"><span class="muted">${esc(person(a.personId))}</span><h3>${esc(a.name)}</h3><span class="muted">Opening ${curr(cy().opening[a.id])}</span><strong class="${a.balance<0?'red':'green'}">${curr(a.balance)}</strong><button class="btn secondary small" onclick="openAccount('${a.id}')">Edit account / opening</button></div>`).join('')}</div></section><section class="panel"><div class="panelhead"><h2>Data and backups</h2></div><div class="split"><button class="btn secondary" onclick="exportData()">Export JSON backup</button><button class="btn secondary" onclick="document.getElementById('importFile').click()">Import JSON backup</button><button class="btn danger" onclick="resetData()">Reset to October worksheet</button></div><p class="note">Your information stays in local browser storage, not a cloud account. Back up periodically and do not clear browser data without exporting first.</p></section>`}
+function comparePage(){let all=state.cycles.slice().sort((a,b)=>a.start.localeCompare(b.start));return `<div class="panel"><div class="panelhead"><h2>Pay-cycle comparison</h2><button class="btn" onclick="openCycle()">+ New pay cycle</button></div><div class="tablewrap"><table><thead><tr><th>Pay cycle</th><th>Dates</th><th class="right">Estimated income</th><th class="right">Actual income</th><th class="right">Budget</th><th class="right">Actual expenses</th><th class="right">Net cash flow</th><th class="right">Closing banks</th><th></th></tr></thead><tbody>${all.map(c=>`<tr><td><strong>${esc(c.name)}</strong></td><td>${esc(c.start)} – ${esc(c.end)}</td><td class="right">${curr(estimates(c))}</td><td class="right">${curr(income(c))}</td><td class="right">${curr(budget(c))}</td><td class="right">${curr(expenses(c))}</td><td class="right">${curr(income(c)-expenses(c))}</td><td class="right">${curr(balances(c).reduce((s,a)=>s+a.balance,0))}</td><td><button class="btn secondary small" onclick="state.currentCycleId='${c.id}';navTo('Overview')">Open</button></td></tr>`).join('')}</tbody></table></div><p class="note">New pay cycles can inherit budgets and expected income from a previous cycle. Account opening balances can carry forward from its closing balances.</p></div><div class="panel"><h2>Category comparison by pay cycle</h2><div class="tablewrap"><table><thead><tr><th>Category</th>${all.map(c=>`<th class="right">${esc(c.name)} · actual</th>`).join('')}</tr></thead><tbody>${[...new Set(state.items.map(i=>i.category))].map(g=>`<tr><td>${esc(g)}</td>${all.map(c=>`<td class="right">${curr(state.items.filter(i=>i.category===g).reduce((s,i)=>s+spent(i.id,c),0))}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`}
+const field=(label,name,type='text',value='',extra='')=>`<div class="field"><label for="f_${name}">${esc(label)}</label><input id="f_${name}" name="${name}" type="${type}" ${type==='number'?'min="0" step="0.01"':''} value="${esc(value)}" ${extra}></div>`;const select=(label,name,options,value)=>`<div class="field"><label for="f_${name}">${esc(label)}</label><select id="f_${name}" name="${name}">${opts(options,value)}</select></div>`;const peopleOpts=()=>state.people;const accOpts=()=>state.accounts.map(a=>({id:a.id,name:a.name+' ('+person(a.personId)+')'}));const itemOpts=()=>state.items.map(i=>({id:i.id,name:i.category+' / '+i.name}));const closeModal=()=>document.getElementById('modalRoot').innerHTML='';function modal(title,html,onSubmit,extra=''){document.getElementById('modalRoot').innerHTML=`<div class="modalback" onclick="if(event.target===this)closeModal()"><div class="modal" role="dialog" aria-modal="true"><h2>${esc(title)}</h2><form id="dialogForm"><div class="formgrid">${html}</div><div class="modalfoot"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button>${extra}<button class="btn" type="submit">Save</button></div></form></div></div>`;document.getElementById('dialogForm').onsubmit=e=>{e.preventDefault();let values=Object.fromEntries(new FormData(e.currentTarget));try{onSubmit(values);closeModal();save();render()}catch(err){alert(err.message)}}}function requirePositive(n){if(!Number.isFinite(Number(n))||Number(n)<=0)throw Error('Enter an amount greater than zero.');return money(n)}function openTransaction(type='expense',itemId=null,id=null,estimateId=null){if(!assertCycleOpen())return;let t=cy().transactions.find(t=>t.id===id);if(t?.batchId)return alert('This item is part of a grouped payment.');let kind=t?.type||type||'expense',dt=cy().start;let incomeId=t?.incomeEstimateId||estimateId||'',incomeOptions=[{id:'',name:'Unlinked / other income'},...cy().incomeEstimates.map(e=>({id:e.id,name:e.name+' ('+person(e.personId)+')'}))];modal(t?'Edit transaction':'New transaction',`${select('Transaction type','type',[{id:'expense',name:'Expense / savings outflow'},{id:'income',name:'Income / salary deposit'}],kind)}${field('Transaction date','date','date',t?.date||dt,'required')}${select('Household member','personId',peopleOpts(),t?.personId||'marsha')}${select('Bank account','accountId',accOpts(),t?.accountId||state.accounts[0]?.id)}${select('Transaction source','sourceType',[{id:'debit',name:'Debit card'},{id:'cash',name:'Cash'},{id:'ach',name:'ACH / bank transfer'},{id:'credit',name:'Credit card'}],t?.sourceType||'debit')}${field('Source nickname (optional — for any payment method)','sourceNickname','text',t?.sourceNickname||'')}<div class="field" id="expenseBox"><label>Expense item</label><select name="itemId">${opts(itemOpts(),t?.itemId||itemId||state.items[0]?.id)}</select></div><div class="field" id="incomeBox"><label>Expected income source</label><select name="incomeEstimateId">${opts(incomeOptions,incomeId)}</select></div>${field('Amount (JMD)','amount','number',t?.amount||'','required')}${field('Income description / merchant','label','text',t?.label||'')}${field('Notes (optional)','note','text',t?.note||'')}`,v=>{let c=cy();if(v.date<c.start||v.date>c.end)throw Error('Transaction date must fall within this pay cycle ('+c.start+' through '+c.end+').');if(!account(v.accountId))throw Error('Select a valid bank account.');let amount=requirePositive(v.amount);if(!v.itemId&&v.type==='expense')throw Error('Select an expense item.');const source=c.incomeEstimates.find(e=>e.id===v.incomeEstimateId);let obj={id:id||uid(),date:v.date,type:v.type,personId:v.personId,accountId:v.accountId,itemId:v.type==='expense'?v.itemId:null,incomeEstimateId:v.type==='income'?v.incomeEstimateId:null,amount,label:v.type==='income'?(v.label||source?.name||'Other income'):(v.label||''),note:v.note,sourceType:v.sourceType,sourceNickname:String(v.sourceNickname||'').trim().slice(0,80)};if(id)c.transactions=c.transactions.map(x=>x.id===id?obj:x);else c.transactions.push(obj)});const toggle=()=>{let inc=document.querySelector('[name="type"]').value==='income';document.getElementById('expenseBox').classList.toggle('hide',inc);document.getElementById('incomeBox').classList.toggle('hide',!inc)};document.querySelector('[name="type"]').onchange=toggle;toggle()}
+function deleteTransaction(id){if(!assertCycleOpen())return;if(cy().transactions.find(t=>t.id===id)?.batchId)return alert('Grouped transactions cannot be deleted individually.');if(confirm('Delete this transaction? This will recalculate balances and actual totals.')){cy().transactions=cy().transactions.filter(t=>t.id!==id);save();render()}}function openBudget(id){if(!assertCycleOpen())return;let i=getItem(id);modal('Budget: '+i.name,state.people.map(p=>field(p.name+' estimated budget','p_'+p.id,'number',cy().itemBudgets[id]?.[p.id]||0)).join(''),v=>{cy().itemBudgets[id]=Object.fromEntries(state.people.map(p=>[p.id,money(v['p_'+p.id])]));if(Object.values(cy().itemBudgets[id]).some(n=>n<0))throw Error('Budgets cannot be negative.')})}
+function openItem(id=null){if(!assertCycleOpen())return;let i=getItem(id),groups=[...new Set(state.items.map(i=>i.category))];modal(i?'Edit budget item':'Add budget item',`${field('Item name','name','text',i?.name||'','required')}${select('Category','category',groups.map(x=>({id:x,name:x})),i?.category||groups[0])}`,v=>{if(!v.name.trim())throw Error('Name required');if(i){i.name=v.name.trim();i.category=v.category}else{let id=uid();state.items.push({id,name:v.name.trim(),category:v.category});cy().itemBudgets[id]={};}})}function openCategory(){if(!assertCycleOpen())return;modal('Create expense category',field('Category name','name','text','','required'),v=>{let name=v.name.trim();if(!name)throw Error('Enter a category');if(state.items.some(i=>i.category.toLowerCase()===name.toLowerCase()))throw Error('Category already exists');const id=uid();state.items.push({id,name:'New item',category:name});cy().itemBudgets[id]={}})}
+function openIncomeEstimate(id=null){if(!assertCycleOpen())return;let e=cy().incomeEstimates.find(x=>x.id===id);modal(e?'Edit income estimate':'Add expected income',`${select('Household member','personId',peopleOpts(),e?.personId||state.people[0].id)}${field('Income source / salary','name','text',e?.name||'','required')}${field('Estimated amount (JMD)','amount','number',e?.amount??0,'required')}`,v=>{let a=money(v.amount);if(a<0)throw Error('Estimate cannot be negative');if(e)Object.assign(e,{personId:v.personId,name:v.name,amount:a});else cy().incomeEstimates.push({id:uid(),personId:v.personId,name:v.name,amount:a})})}
+function openPerson(id=null){if(!assertCycleOpen())return;let p=state.people.find(p=>p.id===id);modal(p?'Rename household member':'Add household member',field('Name','name','text',p?.name||'','required'),v=>{if(!v.name.trim())throw Error('Name required');if(p)p.name=v.name.trim();else state.people.push({id:uid(),name:v.name.trim()})})}
+function openAccount(id=null){if(!assertCycleOpen())return;let a=account(id);modal(a?'Edit bank account':'Create bank account',`${field('Account label','name','text',a?.name||'','required')}${select('Account owner','personId',peopleOpts(),a?.personId||state.people[0].id)}${field('Opening balance for current pay cycle (JMD)','opening','number',cy().opening[id]??0,'step="0.01"')}`,v=>{let opening=Number(v.opening);if(!Number.isFinite(opening))throw Error('Invalid opening balance');if(a){a.name=v.name;a.personId=v.personId;cy().opening[a.id]=money(opening)}else{let id=uid();state.accounts.push({id,name:v.name,personId:v.personId});cy().opening[id]=money(opening);state.cycles.filter(c=>c!==cy()).forEach(c=>c.opening[id]=0)}})}
+async function toggleCycleClosed(){
+ if(currentUser?.role!=='admin')return;
+ if(dirty||saveRunning){alert('Save your changes before changing a cycle status.');return}
+ const c=cy(),closing=!c.closed;
+ if(!confirm((closing?'Close ':'Reopen ')+c.name+'? '+(closing?'All users will be able to view it, but no changes to its financial records will be allowed.':'Transactions and budget edits will be allowed again.')))return;
+ try{await api('/cycles/status','POST',{cycleId:c.id,closed:closing,version:cloudVersion});location.reload()}catch(e){alert(e.message)}
+}
+function assertCycleOpen(){if(cy().closed){alert('This pay cycle is closed. You can review it, but cannot make changes.');return false}return true}
+async function deletePayCycle(){
+ if(currentUser?.role!=='admin')return;
+ if(dirty||saveRunning){alert('Please make sure pending changes are saved before deleting a pay cycle.');return}
+ const cycle=cy();
+ if(state.cycles.length<=1){alert('At least one pay cycle must remain.');return}
+ const transactionCount=cycle.transactions?.length||0;
+ const groupCount=cycle.paymentGroups?.length||0;
+ const message='PERMANENT DELETE: '+cycle.name+'\\n\\nThis will permanently delete its income estimates, item budgets, '+transactionCount+' transaction(s), and '+groupCount+' payment group(s). Other cycles and saved templates will remain.\\n\\nEnter the exact pay cycle name to confirm:';
+ const answer=prompt(message);
+ if(answer===null)return;
+ if(answer!==cycle.name){alert('The name did not match. Nothing was deleted.');return}
+ if(!confirm('Last confirmation: permanently delete '+cycle.name+' and all its pay-cycle data?'))return;
+ try{
+  await api('/cycles/delete','POST',{cycleId:cycle.id,version:cloudVersion});
+  location.reload();
+ }catch(err){alert('Deletion not completed: '+err.message)}
+}
+function openCycle(){let previous=cy(),month=new Date(previous.start+'T12:00:00');month.setMonth(month.getMonth()+1);let defaultMonth=month.toISOString().slice(0,7);modal('Create monthly pay cycle',`${field('Cycle name','name','text',new Date(defaultMonth+'-01T12:00:00').toLocaleString('en-US',{month:'long',year:'numeric'}),'required')}${field('Month','month','month',defaultMonth,'required')}${field('Start date','start','date',defaultMonth+'-01','required')}${field('End date','end','date',defaultMonth+'-'+new Date(Number(defaultMonth.slice(0,4)),Number(defaultMonth.slice(5,7)),0).getDate(),'required')}<div class="field full"><label><input style="width:auto" name="copy" type="checkbox" checked> Copy current item budgets and income estimates</label></div><div class="field full"><label><input style="width:auto" name="carry" type="checkbox" checked> Carry forward bank closing balances</label></div>`,v=>{if(v.end<v.start)throw Error('End date must be on or after start date');if(state.cycles.some(c=>c.name===v.name))throw Error('Cycle with this name already exists');let old=previous;let id=uid();let newCycle={id,name:v.name,month:v.month,start:v.start,end:v.end,opening:Object.fromEntries(state.accounts.map(a=>[a.id,v.carry?balances(old).find(b=>b.id===a.id)?.balance||0:0])),incomeEstimates:v.copy?old.incomeEstimates.map(i=>({...i,id:uid()})):[],itemBudgets:v.copy?structuredClone(old.itemBudgets):{},paymentGroups:[],transactions:[]};state.cycles.push(newCycle);state.currentCycleId=id;view='Overview'})}
+function exportData(){const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='household-budget-'+cy().month+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}document.getElementById('importFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let data=JSON.parse(await f.text());if(!valid(data))throw Error('Invalid budget backup format');if(confirm('Replace all current budget data with this backup?')){state=data;view='Overview';save();render()}}catch(err){alert('Could not import: '+err.message)}e.target.value=''};function resetData(){if(confirm('Replace ALL locally saved changes with the original October 2026 starting budget? Export a backup first.')){state=initial();view='Overview';save();render()}}
+</script><script>
+window.addEventListener('error',function(e){var root=document.getElementById('authRoot');if(root&&!root.innerHTML){root.innerHTML='<div class="authCover"><div class="authPanel"><h2>HomeLedger could not start</h2><p>The application encountered an error.</p><pre style="white-space:pre-wrap;word-break:break-word"></pre><button onclick="location.reload()">Reload</button></div></div>';root.querySelector('pre').textContent=String(e.message||'Unknown error');}});
+window.addEventListener('unhandledrejection',function(e){var root=document.getElementById('authRoot');if(root&&!root.innerHTML){root.innerHTML='<div class="authCover"><div class="authPanel"><h2>Unable to connect to HomeLedger</h2><p>Check the Worker logs and database migrations.</p><button onclick="location.reload()">Reload</button></div></div>';}});
+</script><script>
+let currentUser=null;
+const root=document.getElementById('authRoot');
+function authScreen(setup=false,message=''){
+ root.innerHTML=`<div class="authCover"><div class="authPanel"><h1>◈ HomeLedger</h1><p>${setup?'Create the first household administrator':'Sign in to your household budget'}</p><form id="authForm">${setup?'<label>Your name<input name="name" required autocomplete="name"></label>':''}<label>Email<input name="email" type="email" required autocomplete="email"></label><label>Password<input name="password" type="password" minlength="12" required autocomplete="${setup?'new-password':'current-password'}"></label>${setup?'<label>Cloudflare bootstrap token<input name="bootstrapToken" type="password" required></label>':''}<p id="authError" class="error">${esc(message)}</p><button type="submit">${setup?'Create household':'Sign in'}</button></form></div></div>`;
+ document.getElementById('authForm').onsubmit=async e=>{e.preventDefault();const values=Object.fromEntries(new FormData(e.target));try{await api(setup?'/setup':'/login','POST',values);root.innerHTML='';await loadCloud()}catch(err){document.getElementById('authError').textContent=err.message}};
+}
+async function loadCloud(){try{let me=await api('/me');currentUser=me.user;let data=await api('/state');cloudVersion=data.version;if(data.state&&valid(data.state)){state=data.state;if(currentUser.role==='member'){memberCycleId=state.cycles.slice().sort((a,b)=>(b.start||b.month||'').localeCompare(a.start||a.month||''))[0]?.id||null}else ensureItemTemplates()}else if(currentUser.role==='admin'){state=initial();save()}else{throw Error('Household budget is not initialized yet. Ask the administrator to sign in first.')}root.innerHTML='';addCloudControls();render()}catch(err){if(err.status===401){let setup=await api('/setup/status');authScreen(setup.setupRequired)}else{root.innerHTML='<div class="authCover"><div class="authPanel"><h2>Could not load budget</h2><p>'+esc(err.message)+'</p><button onclick="location.reload()">Try again</button></div></div>'}}}
+function addCloudControls(){if(document.getElementById('cloudControls'))return;let host=document.querySelector('.side .bottom');let box=document.createElement('div');box.id='cloudControls';box.innerHTML='<p id="whoami"></p><div class="cloudAdmin"><button onclick="changePassword()">Password</button><button onclick="logoutCloud()">Sign out</button><button id="addLogin" onclick="newLogin()">+ Login</button><button id="mapLogin" onclick="mapHouseholdLogin()">Map login</button></div>';host.appendChild(box);document.getElementById('whoami').textContent=currentUser.name+' ('+currentUser.role+')';document.getElementById('addLogin').style.display=currentUser.role==='admin'?'inline-block':'none';document.getElementById('mapLogin').style.display=currentUser.role==='admin'?'inline-block':'none';if(currentUser.role!=='admin')document.getElementById('whoami').textContent+=' — private member view'}
+async function logoutCloud(){if(dirty){await flushSave();if(dirty){alert('Unsaved changes: export a backup before signing out.');return}}await api('/logout','POST',{});location.reload()}
+async function newLogin(){if(currentUser?.role!=='admin')return;let name=prompt('New household login: display name');if(!name)return;let email=prompt('Email address used to sign in');if(!email)return;let password=prompt('Temporary password (at least 12 characters). Share privately; member should change it at first sign-in.');if(!password)return;try{await api('/users','POST',{name,email,password});alert('Household login created for '+email+'. Share the temporary password securely.')}catch(e){alert(e.message)}}
+async function changePassword(){let currentPassword=prompt('Current password');if(!currentPassword)return;let newPassword=prompt('New password (at least 12 characters)');if(!newPassword)return;try{await api('/password','POST',{currentPassword,newPassword});alert('Password changed.')}catch(e){alert(e.message)}}
+
+async function mapHouseholdLogin(){
+ if(currentUser?.role!=='admin')return;
+ try{
+  const resp=await api('/users');const users=resp.users.filter(x=>x.role==='member');
+  if(!users.length){alert('Create a member login first using + Login.');return}
+  const options=users.map((u,i)=> (i+1)+'. '+u.name+' ('+u.email+') — '+(state.people.find(p=>p.id===u.personId)?.name||'Not mapped')).join('\n');
+  const choice=prompt('Select login to map by number:\n'+options);
+  if(choice===null)return;
+  const index=Number(choice)-1;if(!Number.isInteger(index)||!users[index])throw Error('Invalid login selection');
+  const members=state.people.map((p,i)=>(i+1)+'. '+p.name).join('\n');
+  const selected=prompt('Assign '+users[index].name+' to household member (number):\n'+members);
+  if(selected===null)return;
+  const personIndex=Number(selected)-1;
+  if(!Number.isInteger(personIndex)||!state.people[personIndex])throw Error('Invalid household member');
+  if(!confirm('Map '+users[index].email+' to '+state.people[personIndex].name+'? Their next login will see only that member\'s financial data.'))return;
+  await api('/users/map','POST',{userId:users[index].id,personId:state.people[personIndex].id});
+  alert('Login mapped. Ask the household member to sign out and sign in again to refresh access.');
+ }catch(err){alert(err.message)}
+}
+const originalRender=render;
+render=function(){
+ originalRender();
+ if(currentUser?.role==='member'){
+  document.getElementById('subhead').textContent=cy().name+' — '+(state.people[0]?.name||'Personal');
+  const restricted=['+ Category','+ Budget item','+ Member','Rename','+ Bank account','Edit account / opening','+ Pay cycle','Reset to October','Import backup','Import','Delete item','Edit item'];
+  document.querySelectorAll('button').forEach(b=>{if(restricted.some(x=>b.textContent.trim().includes(x)))b.style.display='none'});
+  document.getElementById('cycleSelect').disabled=false;
+ }
+};
+
+loadCloud();
+
+</script></body></html>

@@ -1,0 +1,16 @@
+{
+  "name": "homeledger-household",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply homeledger-db --local",
+    "db:remote": "wrangler d1 migrations apply homeledger-db --remote",
+    "check": "node --check src/worker.js && node --check public/cloud.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
