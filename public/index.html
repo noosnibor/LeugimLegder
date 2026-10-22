@@ -1,34 +1,206 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Household Budget • Monthly Planner</title><style>
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#19304a;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}.side{background:#112a44;color:white;padding:27px 19px}.brand{font-weight:800;font-size:22px;line-height:1.15}.brand small{display:block;color:#91adc6;font-weight:500;font-size:12px;margin-top:8px}.nav{margin-top:36px;display:grid;gap:7px}.nav button{border:0;text-align:left;background:transparent;color:#bdd0df;padding:13px 14px;border-radius:11px}.nav button.active,.nav button:hover{background:#294863;color:white}.bottom{margin-top:35px;font-size:12px;color:#9fb6c9;line-height:1.7}.main{padding:29px 37px;max-width:1580px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap}.eyebrow{color:#668099;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:800}.top h1{margin:5px 0 7px;font-size:29px}.muted{color:#71849a;font-size:13px}.controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.btn{background:#1b6a92;color:white;border:0;padding:11px 15px;border-radius:9px;font-weight:650}.btn.secondary{background:white;color:#294b65;border:1px solid #d7e1e9}.btn.danger{background:#fff1f1;color:#b42929}.btn.small{padding:7px 10px;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin:24px 0}.card,.panel{background:#fff;border:1px solid #e1e8f0;border-radius:15px;box-shadow:0 3px 16px #15365208}.card{padding:19px}.card .value{font-size:26px;font-weight:800;margin:9px 0}.card .label{font-size:13px;color:#688197}.card .foot{font-size:12px;color:#8195a5}.green{color:#167960}.red{color:#c14b4b}.panel{padding:22px;margin-bottom:19px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:19px}.panel h2{font-size:18px;margin:0}.panel h3{font-size:15px;margin:5px 0 12px}.grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}.barrow{margin-bottom:14px}.barrow .line{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:7px}.progress{height:9px;background:#e9eff5;border-radius:50px;overflow:hidden}.fill{background:#3485a8;height:100%;border-radius:50px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px}th{background:#f7f9fc;color:#6b8196;font-weight:750;text-align:left;padding:12px 10px;white-space:nowrap}td{padding:12px 10px;border-bottom:1px solid #edf0f4;vertical-align:middle}tr:last-child td{border-bottom:0}.tag{font-size:11px;border-radius:50px;padding:4px 9px;background:#e9f2f8;color:#21668b}.right{text-align:right}.empty{text-align:center;padding:28px;color:#758ba0}.actions{display:flex;gap:7px;flex-wrap:wrap}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:750;color:#4e657a}.field input,.field select{padding:11px 12px;border:1px solid #d6e1ea;border-radius:9px;background:white;color:#19304a;width:100%}.field.full{grid-column:1/-1}.modalback{position:fixed;inset:0;background:#132b46a6;display:flex;align-items:center;justify-content:center;padding:17px;z-index:20}.modal{width:min(650px,100%);max-height:92vh;overflow:auto;background:white;border-radius:16px;padding:25px;box-shadow:0 12px 55px #0003}.modal h2{margin:0 0 18px}.modalfoot{display:flex;justify-content:flex-end;gap:9px;margin-top:22px}.note{font-size:12px;color:#70869b;line-height:1.6}.accountgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.account{background:#f5f9fc;border:1px solid #e2ebf2;border-radius:12px;padding:15px}.account strong{display:block;font-size:19px;margin:8px 0}.pill{display:inline-block;background:#eff5f8;border-radius:30px;padding:5px 10px;color:#526f87;font-size:12px}.split{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.hide{display:none!important}@media(max-width:1050px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.accountgrid{grid-template-columns:1fr 1fr}}@media(max-width:700px){.app{display:block}.side{padding:17px}.brand{font-size:19px}.nav{display:flex;overflow:auto;margin-top:17px}.nav button{white-space:nowrap}.bottom{display:block;margin-top:12px;padding-top:10px;border-top:1px solid #38536c;font-size:12px}.bottom #cloudControls{display:block}.bottom #whoami{margin:0 0 8px;color:#e6f1fa}.bottom .cloudAdmin{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}.bottom .cloudAdmin button{padding:10px 12px;min-height:44px;touch-action:manipulation}.main{padding:20px 12px}.cards{gap:9px}.card{padding:14px}.card .value{font-size:19px}.panel{padding:15px}.formgrid,.accountgrid{grid-template-columns:1fr}.top h1{font-size:24px}}
-.authCover{position:fixed;inset:0;background:linear-gradient(145deg,#102943,#294d6a);display:flex;align-items:center;justify-content:center;z-index:1000;padding:20px}.authPanel{background:white;border-radius:18px;padding:28px;width:100%;max-width:440px;box-shadow:0 20px 50px #0004}.authPanel h1{margin:0 0 12px}.authPanel input{width:100%;padding:11px;margin:8px 0 12px;border:1px solid #cbd5e1;border-radius:8px}.authPanel button{width:100%;padding:12px;background:#155f86;color:white;border:0;border-radius:8px}.authPanel .error{color:#b42318}.cloudAdmin{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px} .cloudAdmin button{padding:9px 14px;border-radius:8px;border:1px solid #a5b4c4;background:white} @media(max-width:700px){.app{display:block}.side{padding:14px}.nav{display:flex;overflow-x:auto;margin-top:12px}.nav button{white-space:nowrap}.main{padding:16px!important}.top{display:block!important}.controls{margin-top:14px;display:flex;flex-wrap:wrap}.modal{max-height:90vh;overflow:auto}}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0B3326"><title>Household Budget • Monthly Planner</title><style>
+/* HomeLedger — "bush green" design system.
+   One bold surface (the cycle hero), everything else quiet. Tokens first, components after. */
+@font-face{font-family:"Bricolage Grotesque";src:url(/fonts/bricolage-grotesque-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url(/fonts/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700;font-display:swap}
 
-/* HomeLedger violet & ivory design system */
-:root{--plum:#2b124a;--plum-deep:#1c0e35;--violet:#54307a;--violet-bright:#7048a3;--lavender:#eee7f6;--ivory:#f8f5ed;--ivory-card:#fcfaf5;--ink:#30223c;--soft-ink:#70637c;--line:#e7dfee;color:var(--ink);background:var(--ivory)}
-html{background:var(--ivory)}
-body{color:var(--ink);background-color:var(--ivory);background-image:radial-gradient(circle at 2px 2px,rgba(84,48,122,.045) .7px,transparent 1.2px),repeating-linear-gradient(35deg,rgba(139,113,87,.018) 0 1px,transparent 1px 6px),linear-gradient(135deg,#fbf9f2,#f3eee5);background-size:8px 8px,auto,auto;background-attachment:fixed}
-.side{background:linear-gradient(165deg,var(--plum-deep) 0%,var(--plum) 55%,#442263 100%);color:#f8f3ff}
-.brand small,.bottom{color:#c7b2dd}.nav button{color:#ddceed}.nav button.active,.nav button:hover{background:#644080;color:#fff}
-.main{background:transparent}.top h1,.panel h2,.panel h3{color:var(--plum-deep)}
-.eyebrow{color:#79579e}.muted,.note,.empty,.card .label,.card .foot{color:var(--soft-ink)}
-.btn{background:var(--violet);color:#fff}.btn:hover{background:#64408c}.btn.secondary{background:#fffcf7;color:var(--plum);border:1px solid #d9cde5}.btn.secondary:hover{background:var(--lavender)}
-.btn.danger{background:#fae8ec;color:#a72e50}
-.card,.panel{background:var(--ivory-card);border:1px solid var(--line);box-shadow:0 4px 22px rgba(44,22,70,.055)}
-.account{background:#f5f0e9;border-color:#e7ddeb}.account strong{color:var(--plum)}
-th{background:#f0eaf4;color:#654d79}td{border-bottom-color:#eae2e9}
-.tag,.pill{background:#eee5f4;color:#5a387c}
-.progress{background:#e9dff0}.fill{background:#8656ab}
-.barrow .fill{background:#8656ab!important}
-.field label{color:#5b456b}.field input,.field select,.field textarea{background:#fffdf8;color:var(--ink);border-color:#d7cbdc}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #a888cb;outline-offset:1px}
-.modalback{background:#201032b0}.modal,.authPanel{background:var(--ivory-card)}
-.authCover{background:radial-gradient(circle at 75% 20%,#694192,var(--plum) 52%,var(--plum-deep))}
-.authPanel button{background:var(--violet)}
-.cloudAdmin button{background:#f9f4ff;color:#35194d;border:1px solid #a58abd}.cloudAdmin button:hover{background:#e9daf5}
-.bottom{border-color:#6b488b!important}.bottom #whoami{color:#f8efff!important}
-#syncIndicator{background:var(--plum)!important}
-@media(max-width:700px){.side{background:linear-gradient(120deg,#21103b,#442061)}.main{background:transparent}}
+:root{
+ --canvas:#EAF0EE;--surface:#FFFFFF;--tile:#F3F7F5;--hover:#F3F8F5;
+ --ink:#11231D;--muted:#5B6F67;--line:#D5E0DB;--line-soft:#E6EEEA;
+ --primary:#0F6B4F;--primary-hover:#0B5A42;--primary-soft:#E0F0EA;
+ --hero:#0B3326;--hero-2:#13553F;--gold:#F0B429;
+ --good:#11795A;--good-soft:#E0F0EA;--bad:#C23A22;--bad-soft:#FBE9E5;
+ --scrim:rgba(9,25,20,.55);
+ --r-lg:18px;--r-md:12px;--r-sm:10px;
+ --font-body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+ --font-display:"Bricolage Grotesque","Instrument Sans",ui-sans-serif,system-ui,sans-serif;
+ color-scheme:light dark;
+}
+@media(prefers-color-scheme:dark){:root{
+ --canvas:#0B1411;--surface:#121D19;--tile:#17251F;--hover:#17251F;
+ --ink:#E6F0EB;--muted:#9DB3AA;--line:#253630;--line-soft:#1C2B26;
+ --primary:#14805F;--primary-hover:#1A9473;--primary-soft:#173D31;
+ --hero:#0E3B2C;--hero-2:#17604A;
+ --good:#4CCB9F;--good-soft:#173D31;--bad:#FF8A73;--bad-soft:#3B1F1A;
+ --scrim:rgba(0,0,0,.65);
+}}
 
-</style></head><body><div class="app"><aside class="side"><div class="brand">◈ HomeLedger<small>Household finance workspace</small></div><nav class="nav" id="nav"></nav><div class="bottom">October 2026 budget starter<br>Jamaican dollars (JMD)<br><br>Shared securely through Cloudflare. Changes synchronize across devices.</div></aside><main class="main"><div class="top"><div><div class="eyebrow" id="subhead">PERSONAL FINANCE</div><h1 id="pageTitle">Overview</h1><div class="muted" id="subtitle">Track every pay cycle, person and transaction.</div></div><div class="controls"><select id="cycleSelect" aria-label="Pay cycle" class="btn secondary"></select><button class="btn secondary" onclick="openCycle()">+ Pay cycle</button><button id="closeCycleButton" class="btn secondary" onclick="toggleCycleClosed()" style="display:none">Close pay cycle</button><button id="deleteCycleButton" class="btn danger" onclick="deletePayCycle()" style="display:none">Delete pay cycle</button><button class="btn" onclick="openTransaction()">+ Transaction</button></div></div><div id="content"></div></main></div><div id="modalRoot"></div><div id="authRoot"></div><div id="syncIndicator" style="position:fixed;right:14px;bottom:10px;background:#112a44;color:#fff;border-radius:8px;padding:6px 10px;font-size:12px;z-index:10;display:none"></div><input type="file" id="importFile" accept="application/json,.json" hidden><script>
+*{box-sizing:border-box}
+html{background:var(--canvas)}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+h1,h2,h3{font-family:var(--font-display);letter-spacing:-.015em}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.hide{display:none!important}
+
+/* ---------- Shell ---------- */
+.app{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}
+.side{background:var(--surface);border-right:1px solid var(--line);padding:24px 14px 18px;position:sticky;top:0;height:100vh;overflow:auto;display:flex;flex-direction:column}
+.brand{display:grid;grid-template-columns:auto 1fr;column-gap:11px;align-items:center;padding:0 8px}
+.brand .name{font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:-.02em;line-height:1.1}
+.brand small{grid-column:2;color:var(--muted);font-size:12.5px;line-height:1.3}
+.mark{grid-row:1/3;width:34px;height:34px;border-radius:10px;background:var(--hero);position:relative;flex:none;display:inline-block}
+.mark::after{content:"";position:absolute;inset:10px;background:var(--gold);transform:rotate(45deg);border-radius:2px}
+.nav{margin-top:28px;display:grid;gap:3px}
+.nav button{display:flex;align-items:center;gap:12px;border:0;text-align:left;background:transparent;color:var(--muted);padding:10px 12px;border-radius:var(--r-sm);font-weight:560}
+.nav button svg{flex:none}
+.nav button:hover{background:var(--tile);color:var(--ink)}
+.nav button.active{background:var(--primary-soft);color:var(--primary);font-weight:650}
+@media(prefers-color-scheme:dark){.nav button.active{color:var(--good)}}
+.bottom{margin-top:auto;padding:16px 8px 0;border-top:1px solid var(--line-soft);color:var(--muted);font-size:13px}
+.bottom .fine{margin:0 0 14px;line-height:1.5}
+.bottom #whoami{margin:0 0 10px;color:var(--ink);font-weight:600;font-size:13px}
+.cloudAdmin{display:flex;gap:7px;flex-wrap:wrap}
+.cloudAdmin button{min-height:34px;padding:0 12px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:13px;font-weight:560}
+.cloudAdmin button:hover{background:var(--tile)}
+
+.main{padding:34px 40px 64px;max-width:1260px;width:100%;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.eyebrow{color:var(--primary);font-weight:650;font-size:14px}
+@media(prefers-color-scheme:dark){.eyebrow{color:var(--good)}}
+.top h1{margin:2px 0 4px;font-size:clamp(28px,3.4vw,38px);font-weight:650;line-height:1.1}
+.muted{color:var(--muted);font-size:14px}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:0 16px;border-radius:var(--r-sm);border:1px solid transparent;background:var(--primary);color:#fff;font-weight:620;transition:background .15s,border-color .15s}
+.btn:hover{background:var(--primary-hover)}
+.btn.secondary{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.btn.secondary:hover{background:var(--tile);border-color:var(--muted)}
+.btn.danger{background:var(--bad-soft);color:var(--bad)}
+.btn.danger:hover{background:var(--bad-soft);border-color:var(--bad)}
+.btn.small{min-height:32px;padding:0 11px;font-size:13px}
+select.btn{appearance:none;padding-right:36px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235B6F67' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
+/* the cycle-level destructive controls stay quiet */
+#deleteCycleButton,#closeCycleButton{background:transparent;border-color:transparent;color:var(--muted)}
+#deleteCycleButton{color:var(--bad)}
+#deleteCycleButton:hover{background:var(--bad-soft)}
+#closeCycleButton:hover{background:var(--tile)}
+/* row actions stay quiet until hovered */
+td .btn.secondary{background:transparent;border-color:transparent;color:var(--primary)}
+td .btn.secondary:hover{background:var(--primary-soft);border-color:transparent}
+td .btn:not(.secondary):not(.danger){background:var(--primary-soft);color:var(--primary)}
+td .btn:not(.secondary):not(.danger):hover{background:var(--line)}
+td .btn.danger{background:transparent;color:var(--bad)}
+td .btn.danger:hover{background:var(--bad-soft)}
+@media(prefers-color-scheme:dark){td .btn.secondary,td .btn:not(.secondary):not(.danger){color:var(--good)}}
+
+/* ---------- Cycle hero ---------- */
+.hero{background:radial-gradient(120% 150% at 100% 0%,var(--hero-2),var(--hero) 62%);color:#EAF6F0;border-radius:24px;padding:30px 34px 26px;margin:24px 0 20px}
+.hero .lead{font-size:15px;color:#A9CDBE;font-weight:560}
+.hero .big{font-family:var(--font-display);font-size:clamp(40px,6.4vw,66px);font-weight:650;letter-spacing:-.03em;line-height:1.04;margin:4px 0 22px;font-variant-numeric:tabular-nums}
+.meter{position:relative;height:14px;border-radius:99px;background:rgba(255,255,255,.14)}
+.meter .spent{position:absolute;inset:0 auto 0 0;border-radius:99px;background:#8FE0BE;min-width:14px}
+.meter .spent.over{background:#FF8F76}
+.meter .today{position:absolute;top:-6px;bottom:-6px;width:3px;margin-left:-1.5px;border-radius:2px;background:var(--gold)}
+.hero .pace{margin-top:14px;font-size:14px;color:#C4E0D3;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hero .pace .tick{display:inline-block;width:3px;height:14px;border-radius:2px;background:var(--gold)}
+.herostats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15)}
+.herostats .k{font-size:13px;color:#A9CDBE}
+.herostats .v{font-family:var(--font-display);font-size:clamp(18px,2vw,24px);font-weight:620;margin-top:2px;font-variant-numeric:tabular-nums}
+
+/* ---------- Panels & stat cards ---------- */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;margin-bottom:20px}
+.panelhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.panel h2{font-size:20px;margin:0;font-weight:650}
+.panel h3{font-size:16px;margin:6px 0 12px;font-weight:650}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
+.card .label{font-size:13px;color:var(--muted)}
+.card .value{font-family:var(--font-display);font-size:26px;font-weight:620;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.card .foot{font-size:12.5px;color:var(--muted)}
+.green{color:var(--good)}.red{color:var(--bad)}
+.grid2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px}
+.grid2>.panel{margin-bottom:20px}
+.note{font-size:13px;color:var(--muted);line-height:1.6;max-width:72ch}
+.empty{text-align:center;padding:34px 12px;color:var(--muted)}
+.split{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.actions{display:flex;gap:4px;flex-wrap:wrap}
+
+/* category bars */
+.barrow{margin-bottom:16px}
+.barrow .line{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin-bottom:7px;font-variant-numeric:tabular-nums}
+.barrow .line span{color:var(--muted)}
+.progress{height:8px;background:var(--line-soft);border-radius:99px;overflow:hidden}
+.fill{background:var(--primary);height:100%;border-radius:99px}
+.fill.over{background:var(--bad)}
+
+/* account tiles */
+.accountgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.account{background:var(--tile);border:1px solid var(--line-soft);border-radius:var(--r-md);padding:16px}
+.account strong{display:block;font-family:var(--font-display);font-size:22px;font-weight:620;margin:6px 0;font-variant-numeric:tabular-nums}
+.account h3{margin:2px 0 6px}
+.pill{display:inline-block;background:var(--primary-soft);border-radius:99px;padding:3px 10px;color:var(--primary);font-size:12.5px;font-weight:600;vertical-align:middle}
+@media(prefers-color-scheme:dark){.pill{color:var(--good)}}
+
+/* ---------- Tables ---------- */
+.tablewrap{overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+th{color:var(--muted);font-weight:600;font-size:13px;text-align:left;padding:10px 12px;white-space:nowrap;border-bottom:1px solid var(--line)}
+td{padding:12px;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+tbody tr:hover td{background:var(--hover)}
+tr:last-child td{border-bottom:0}
+.right{text-align:right}
+.tag{font-size:12px;font-weight:600;border-radius:99px;padding:3px 10px;background:var(--tile);color:var(--muted);white-space:nowrap}
+.tag.income{background:var(--good-soft);color:var(--good)}
+
+/* ---------- Forms & dialogs ---------- */
+.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.field{display:grid;gap:6px;align-content:start}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:620;color:var(--ink)}
+.field input,.field select,.field textarea{min-height:42px;padding:9px 12px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface);width:100%}
+.field input[type=checkbox]{min-height:0;width:auto;accent-color:var(--primary)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+.modalback{position:fixed;inset:0;background:var(--scrim);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:17px;z-index:20}
+.modal{width:min(660px,100%);max-height:92vh;overflow:auto;background:var(--surface);border-radius:22px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.28);animation:pop .16s ease-out}
+.modal h2{margin:0 0 20px;font-size:22px}
+.modalfoot{display:flex;justify-content:flex-end;gap:9px;margin-top:24px}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+
+/* ---------- Sign-in ---------- */
+.authCover{position:fixed;inset:0;background:radial-gradient(90% 90% at 80% 10%,var(--hero-2),var(--hero) 65%);display:flex;align-items:center;justify-content:center;z-index:1000;padding:20px;overflow:auto}
+.authPanel{background:var(--surface);border-radius:24px;padding:34px;width:100%;max-width:440px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.authPanel h1{display:flex;align-items:center;gap:12px;margin:0 0 6px;font-size:28px}
+.authPanel h1 .mark{width:36px;height:36px}
+.authPanel h2{margin:0 0 8px}
+.authPanel p{color:var(--muted);margin:0 0 14px}
+.authPanel label{display:block;font-size:13px;font-weight:620;margin-top:12px}
+.authPanel input{display:block;width:100%;min-height:44px;padding:9px 12px;margin:6px 0 2px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface);font-weight:400}
+.authPanel input:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+.authPanel button{width:100%;min-height:46px;margin-top:8px;background:var(--primary);color:#fff;border:0;border-radius:var(--r-sm);font-weight:650}
+.authPanel button:hover{background:var(--primary-hover)}
+.authPanel .error{color:var(--bad);min-height:1.4em;margin:12px 0 0;font-size:14px}
+
+#syncIndicator{display:none;position:fixed;right:16px;bottom:14px;z-index:30;background:var(--ink);color:var(--canvas);border-radius:99px;padding:7px 15px;font-size:13px;font-weight:560;box-shadow:0 8px 26px rgba(0,0,0,.2)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1050px){.grid2{grid-template-columns:1fr}.accountgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.herostats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){
+ .app{display:block}
+ .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:16px 14px 12px}
+ .nav{display:flex;overflow-x:auto;margin:14px -14px 0;padding:0 14px 4px;gap:6px;scrollbar-width:none}
+ .nav button{white-space:nowrap;min-height:44px;padding:0 14px;background:var(--tile)}
+ .bottom{margin-top:12px;padding-top:12px}
+ .bottom .fine{display:none}
+ .cloudAdmin button{min-height:44px;touch-action:manipulation}
+ .main{padding:22px 14px 48px}
+ .top{display:block}
+ .controls{margin-top:16px}
+ .controls select.btn{flex:1 1 150px}
+ .btn{min-height:44px}.btn.small{min-height:38px}
+ .hero{padding:22px 20px 20px;border-radius:20px}
+ .panel{padding:18px 16px}
+ .formgrid,.accountgrid{grid-template-columns:1fr}
+ .modal{padding:22px 18px}
+ td{white-space:nowrap}
+}
+@media(max-width:420px){.herostats{gap:14px}.cards{grid-template-columns:1fr 1fr;gap:10px}.card{padding:14px}.card .value{font-size:21px}}
+@media print{.side,.controls,.btn,#syncIndicator{display:none!important}.app{display:block}body,html{background:#fff}.main{padding:0;max-width:none}.panel,.card{border-color:#ccc}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+</style></head><body><div class="app"><aside class="side"><div class="brand"><span class="mark" aria-hidden="true"></span><span class="name">HomeLedger</span><small>Household finance</small></div><nav class="nav" id="nav"></nav><div class="bottom"><p class="fine">Amounts are in Jamaican dollars (JMD). Changes sync across your devices.</p></div></aside><main class="main"><div class="top"><div><div class="eyebrow" id="subhead">PERSONAL FINANCE</div><h1 id="pageTitle">Overview</h1><div class="muted" id="subtitle">Track every pay cycle, person and transaction.</div></div><div class="controls"><select id="cycleSelect" aria-label="Pay cycle" class="btn secondary"></select><button class="btn secondary" onclick="openCycle()">+ Pay cycle</button><button id="closeCycleButton" class="btn secondary" onclick="toggleCycleClosed()" style="display:none">Close pay cycle</button><button id="deleteCycleButton" class="btn danger" onclick="deletePayCycle()" style="display:none">Delete pay cycle</button><button class="btn" onclick="openTransaction()">+ Transaction</button></div></div><div id="content"></div></main></div><div id="modalRoot"></div><div id="authRoot"></div><div id="syncIndicator" role="status" aria-live="polite"></div><input type="file" id="importFile" accept="application/json,.json" hidden><script>
 const KEY='homeledger_oct2026_v1';const curr=n=>new Intl.NumberFormat('en-JM',{style:'currency',currency:'JMD',maximumFractionDigits:0}).format(Number(n)||0);const money=n=>Math.round((Number(n)||0)*100)/100;const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));const uid=()=>Math.random().toString(36).slice(2,11)+Date.now().toString(36);const seedGroups=[]; // Financial records are loaded from the protected API, not public frontend assets.
 function initial(){let people=[{id:'marsha',name:'Marsha'},{id:'darren',name:'Darren'}];let items=seedGroups.flatMap(([category,arr])=>arr.map(([name,budget])=>({id:uid(),category,name,budgets:{marsha:budget}})));return {version:1,people,accounts:[{id:'main',name:'Primary bank account',personId:'marsha',opening:0}],cycles:[{id:'oct26',name:'October 2026',month:'2026-10',start:'2026-10-01',end:'2026-10-31',opening:{main:0},incomeEstimates:[],paymentGroups:[],itemBudgets:Object.fromEntries(items.map(i=>[i.id,{...i.budgets}])),transactions:[]}],items,currentCycleId:'oct26'} }
 function valid(d){return d&&Array.isArray(d.people)&&Array.isArray(d.accounts)&&Array.isArray(d.cycles)&&Array.isArray(d.items)}let state=initial();let view='Overview';const pages=['Overview','Budget items','Transactions','Income & pay','Accounts & people','Payment groups','Reports','Source report','Compare cycles'];let memberCycleId=null;const cy=()=>state.cycles.find(c=>c.id===(currentUser?.role==='member'&&memberCycleId?memberCycleId:state.currentCycleId))||state.cycles[0];const person=id=>state.people.find(p=>p.id===id)?.name||'Household';const account=id=>state.accounts.find(a=>a.id===id);let cloudVersion=0, saveTimer=null, saveRunning=false, dirty=false, blocked=false;
@@ -36,8 +208,17 @@ const api=async(path,method='GET',data)=>{let res=await fetch('/api'+path,{metho
 const syncLabel=text=>{let x=document.getElementById('syncIndicator');x.textContent=text;x.style.display='block'};
 const save=()=>{dirty=true;if(blocked)return;syncLabel('Unsaved changes');clearTimeout(saveTimer);saveTimer=setTimeout(flushSave,350)};
 async function flushSave(){if(blocked||saveRunning||!dirty)return;saveRunning=true;dirty=false;let payload=structuredClone(state);try{let r=await api('/state','PUT',{state:payload,version:cloudVersion});cloudVersion=r.version;syncLabel('Saved to cloud')}catch(e){blocked=true;dirty=true;syncLabel('Sync stopped — reload required');alert(e.message+' Your unsaved changes remain on this screen. Export a backup before reloading.')}finally{saveRunning=false;if(dirty&&!blocked)saveTimer=setTimeout(flushSave,150)}};
-;const income=(c=cy())=>c.transactions.filter(t=>t.type==='income').reduce((n,t)=>n+money(t.amount),0);const expenses=(c=cy())=>c.transactions.filter(t=>t.type==='expense').reduce((n,t)=>n+money(t.amount),0);const estimates=(c=cy())=>c.incomeEstimates.reduce((n,e)=>n+money(e.amount),0);const budget=(c=cy())=>state.items.reduce((n,i)=>n+Object.values(c.itemBudgets[i.id]||{}).reduce((a,b)=>a+money(b),0),0);const spent=(id,c=cy())=>c.transactions.filter(t=>t.type==='expense'&&t.itemId===id).reduce((n,t)=>n+money(t.amount),0);const itemBudget=(id,c=cy())=>Object.values(c.itemBudgets[id]||{}).reduce((a,b)=>a+money(b),0);const balances=(c=cy())=>state.accounts.map(a=>({...a,balance:money(c.opening[a.id])+c.transactions.filter(t=>t.accountId===a.id).reduce((s,t)=>s+(t.type==='income'?money(t.amount):-money(t.amount)),0)}));const getItem=id=>state.items.find(i=>i.id===id);const opts=(arr,sel,fn)=>arr.map(o=>`<option value="${esc(o.id)}" ${o.id===sel?'selected':''}>${esc(fn?fn(o):o.name)}</option>`).join('');function render(){const lock=document.getElementById('closeCycleButton');if(lock){lock.style.display=currentUser?.role==='admin'?'inline-block':'none';lock.textContent=cy().closed?'Reopen pay cycle':'Close pay cycle'}const del=document.getElementById('deleteCycleButton');if(del)del.style.display=currentUser?.role==='admin'?'inline-block':'none';document.getElementById('nav').innerHTML=pages.map(p=>`<button class="${p===view?'active':''}" onclick="navTo('${p}')">${p}</button>`).join('');document.getElementById('cycleSelect').innerHTML=opts(state.cycles,cy().id,c=>c.name);document.getElementById('pageTitle').textContent=view;document.getElementById('subhead').textContent=cy().name;const summaries={Overview:'A clear picture of your household cash flow.', 'Budget items':'October worksheet categories with item-level tracking.','Transactions':'Daily income and expenses across household accounts.','Income & pay':'Track estimated pay against deposits received.','Accounts & people':'Manage bank opening balances and household members.','Payment groups':'Combined monthly payments for household members.','Reports':'Income and expense reports by cycle and member.','Source report':'Transaction totals by cash, debit card, ACH or credit card.','Compare cycles':'Compare income, spending and budgets over time.'};document.getElementById('subtitle').textContent=summaries[view];document.getElementById('content').innerHTML=({Overview:overview,'Budget items':itemsPage,Transactions:transactionsPage,'Income & pay':incomePage,'Accounts & people':accountsPage,'Payment groups':paymentGroupsPage,'Reports':reportsPage,'Source report':sourceReportPage,'Compare cycles':comparePage}[view])();if(view==='Reports')wireReportFilters();if(view==='Source report')wireSourceReport();document.getElementById('cycleSelect').onchange=e=>{if(currentUser?.role==='member'){memberCycleId=e.target.value;render()}else{state.currentCycleId=e.target.value;save();render()}}}function navTo(p){view=p;render()}function totals(){return `<div class="cards"><div class="card"><div class="label">Estimated income</div><div class="value">${curr(estimates())}</div><div class="foot">Planned household pay</div></div><div class="card"><div class="label">Actual income</div><div class="value green">${curr(income())}</div><div class="foot">Deposits recorded</div></div><div class="card"><div class="label">Budgeted outflows</div><div class="value">${curr(budget())}</div><div class="foot">Expenses and savings targets</div></div><div class="card"><div class="label">Actual outflows</div><div class="value red">${curr(expenses())}</div><div class="foot">Recorded expenses and savings</div></div></div>`}
-function overview(){let groups=[...new Set(state.items.map(i=>i.category))];let ac=balances();return totals()+paymentGroupSummary()+`<div class="grid2"><section class="panel"><div class="panelhead"><h2>Spending by category</h2><button class="btn secondary small" onclick="navTo('Budget items')">View items</button></div>${groups.map(g=>{let its=state.items.filter(i=>i.category===g),b=its.reduce((n,i)=>n+itemBudget(i.id),0),s=its.reduce((n,i)=>n+spent(i.id),0);return `<div class="barrow"><div class="line"><strong>${esc(g)}</strong><span>${curr(s)} / ${curr(b)}</span></div><div class="progress"><div class="fill" style="width:${b?Math.min(100,s/b*100):0}%;background:${s>b?'#c96060':'#8656ab'}"></div></div></div>`}).join('')}</section><section class="panel"><div class="panelhead"><h2>Bank balances</h2><button class="btn secondary small" onclick="navTo('Accounts & people')">Manage</button></div>${ac.map(a=>`<div class="account" style="margin-bottom:12px"><span class="muted">${esc(a.name)} · ${esc(person(a.personId))}</span><strong class="${a.balance<0?'red':'green'}">${curr(a.balance)}</strong><span class="note">Opening ${curr(cy().opening[a.id]||0)} + deposits − outflows</span></div>`).join('')}<div class="account"><div class="muted">Combined closing balance</div><strong>${curr(ac.reduce((s,a)=>s+a.balance,0))}</strong></div></section></div><section class="panel"><div class="panelhead"><h2>Recent activity</h2><button class="btn secondary small" onclick="navTo('Transactions')">All activity</button></div>${transTable(cy().transactions.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,7),false)}</section>`}
+;const income=(c=cy())=>c.transactions.filter(t=>t.type==='income').reduce((n,t)=>n+money(t.amount),0);const expenses=(c=cy())=>c.transactions.filter(t=>t.type==='expense').reduce((n,t)=>n+money(t.amount),0);const estimates=(c=cy())=>c.incomeEstimates.reduce((n,e)=>n+money(e.amount),0);const budget=(c=cy())=>state.items.reduce((n,i)=>n+Object.values(c.itemBudgets[i.id]||{}).reduce((a,b)=>a+money(b),0),0);const spent=(id,c=cy())=>c.transactions.filter(t=>t.type==='expense'&&t.itemId===id).reduce((n,t)=>n+money(t.amount),0);const itemBudget=(id,c=cy())=>Object.values(c.itemBudgets[id]||{}).reduce((a,b)=>a+money(b),0);const balances=(c=cy())=>state.accounts.map(a=>({...a,balance:money(c.opening[a.id])+c.transactions.filter(t=>t.accountId===a.id).reduce((s,t)=>s+(t.type==='income'?money(t.amount):-money(t.amount)),0)}));const getItem=id=>state.items.find(i=>i.id===id);const opts=(arr,sel,fn)=>arr.map(o=>`<option value="${esc(o.id)}" ${o.id===sel?'selected':''}>${esc(fn?fn(o):o.name)}</option>`).join('');function render(){const lock=document.getElementById('closeCycleButton');if(lock){lock.style.display=currentUser?.role==='admin'?'inline-block':'none';lock.textContent=cy().closed?'Reopen pay cycle':'Close pay cycle'}const del=document.getElementById('deleteCycleButton');if(del)del.style.display=currentUser?.role==='admin'?'inline-block':'none';document.getElementById('nav').innerHTML=pages.map(p=>`<button class="${p===view?'active':''}" ${p===view?'aria-current="page"':''} onclick="navTo('${p}')">${navIcon(p)}<span>${p}</span></button>`).join('');document.getElementById('cycleSelect').innerHTML=opts(state.cycles,cy().id,c=>c.name);document.getElementById('pageTitle').textContent=view;document.getElementById('subhead').textContent=cy().name;const summaries={Overview:'A clear picture of your household cash flow.', 'Budget items':'October worksheet categories with item-level tracking.','Transactions':'Daily income and expenses across household accounts.','Income & pay':'Track estimated pay against deposits received.','Accounts & people':'Manage bank opening balances and household members.','Payment groups':'Combined monthly payments for household members.','Reports':'Income and expense reports by cycle and member.','Source report':'Transaction totals by cash, debit card, ACH or credit card.','Compare cycles':'Compare income, spending and budgets over time.'};document.getElementById('subtitle').textContent=summaries[view];document.getElementById('content').innerHTML=({Overview:overview,'Budget items':itemsPage,Transactions:transactionsPage,'Income & pay':incomePage,'Accounts & people':accountsPage,'Payment groups':paymentGroupsPage,'Reports':reportsPage,'Source report':sourceReportPage,'Compare cycles':comparePage}[view])();if(view==='Reports')wireReportFilters();if(view==='Source report')wireSourceReport();document.getElementById('cycleSelect').onchange=e=>{if(currentUser?.role==='member'){memberCycleId=e.target.value;render()}else{state.currentCycleId=e.target.value;save();render()}}}function navTo(p){view=p;render()}function totals(){return `<div class="cards"><div class="card"><div class="label">Estimated income</div><div class="value">${curr(estimates())}</div><div class="foot">Planned household pay</div></div><div class="card"><div class="label">Actual income</div><div class="value green">${curr(income())}</div><div class="foot">Deposits recorded</div></div><div class="card"><div class="label">Budgeted outflows</div><div class="value">${curr(budget())}</div><div class="foot">Expenses and savings targets</div></div><div class="card"><div class="label">Actual outflows</div><div class="value red">${curr(expenses())}</div><div class="foot">Recorded expenses and savings</div></div></div>`}
+const NAV_ICONS={'Overview':'<rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/>','Budget items':'<path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/>','Transactions':'<path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3"/>','Income & pay':'<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="16.5" cy="14.5" r="1"/>','Accounts & people':'<circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M17 14.2c2.4.2 4 2.1 4 4.8"/>','Payment groups':'<path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/>','Reports':'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>','Source report':'<path d="M12 3a9 9 0 1 0 9 9h-9V3Z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15V3.5Z"/>','Compare cycles':'<path d="M7 7h12l-3-3M17 17H5l3 3"/>'};
+const navIcon=p=>`<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${NAV_ICONS[p]||''}</svg>`;
+function hero(){const c=cy(),est=estimates(),inc=income(),bud=budget(),exp=expenses(),left=bud-exp,over=bud>0&&exp>bud,pct=bud>0?Math.min(100,exp/bud*100):0;
+ const day0=s=>{const d=new Date(s+'T00:00:00');return d.getTime()},DAY=864e5,t0=day0(c.start),t1=day0(c.end),now=new Date();now.setHours(0,0,0,0);
+ const span=Math.round((t1-t0)/DAY)+1,day=Math.round((now.getTime()-t0)/DAY)+1,valid=Number.isFinite(span)&&span>0,live=valid&&day>=1&&day<=span;
+ const elapsed=live?Math.round(day/span*100):null;
+ let pace;if(bud<=0)pace='No budget is set for this pay cycle yet. Add budget items to start tracking.';else if(live)pace=`<span class="tick"></span>Day ${day} of ${span}. ${Math.round(pct)}% of the budget is spent and ${elapsed}% of the cycle has passed.`;else if(valid&&day>span)pace=`This pay cycle ended with ${Math.round(pct)}% of the budget spent.`;else pace=`This pay cycle starts on ${esc(c.start)}.`;
+ const stat=(k,v)=>`<div><div class="k">${k}</div><div class="v">${curr(v)}</div></div>`;
+ return `<section class="hero"><div class="lead">${over?'Over budget by':'Left in this budget'}</div><div class="big">${curr(Math.abs(left))}</div><div class="meter" role="img" aria-label="${Math.round(pct)} percent of budget spent"><div class="spent${over?' over':''}" style="width:${pct}%"></div>${live?`<div class="today" style="left:${Math.min(100,Math.max(0,(day-.5)/span*100))}%" title="Today"></div>`:''}</div><div class="pace">${pace}</div><div class="herostats">${stat('Estimated income',est)}${stat('Actual income',inc)}${stat('Budgeted outflows',bud)}${stat('Actual outflows',exp)}</div></section>`}
+function overview(){let groups=[...new Set(state.items.map(i=>i.category))];let ac=balances();return hero()+paymentGroupSummary()+`<div class="grid2"><section class="panel"><div class="panelhead"><h2>Spending by category</h2><button class="btn secondary small" onclick="navTo('Budget items')">View items</button></div>${groups.map(g=>{let its=state.items.filter(i=>i.category===g),b=its.reduce((n,i)=>n+itemBudget(i.id),0),s=its.reduce((n,i)=>n+spent(i.id),0);return `<div class="barrow"><div class="line"><strong>${esc(g)}</strong><span>${curr(s)} / ${curr(b)}</span></div><div class="progress"><div class="fill${s>b?' over':''}" style="width:${b?Math.min(100,s/b*100):0}%"></div></div></div>`}).join('')}</section><section class="panel"><div class="panelhead"><h2>Bank balances</h2><button class="btn secondary small" onclick="navTo('Accounts & people')">Manage</button></div>${ac.map(a=>`<div class="account" style="margin-bottom:12px"><span class="muted">${esc(a.name)} · ${esc(person(a.personId))}</span><strong class="${a.balance<0?'red':'green'}">${curr(a.balance)}</strong><span class="note">Opening ${curr(cy().opening[a.id]||0)} + deposits − outflows</span></div>`).join('')}<div class="account"><div class="muted">Combined closing balance</div><strong>${curr(ac.reduce((s,a)=>s+a.balance,0))}</strong></div></section></div><section class="panel"><div class="panelhead"><h2>Recent activity</h2><button class="btn secondary small" onclick="navTo('Transactions')">All activity</button></div>${transTable(cy().transactions.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,7),false)}</section>`}
 let showHiddenBudgetItems=false;
 function toggleHiddenBudgetItems(){if(currentUser?.role!=='admin')return;showHiddenBudgetItems=!showHiddenBudgetItems;render()}
 function toggleBudgetItemHidden(id){if(!assertCycleOpen())return;if(currentUser?.role!=='admin')return;const item=getItem(id);if(!item)return;item.hidden=!item.hidden;save();render()}
@@ -245,7 +426,7 @@ function wireSourceReport(){
  if(b)b.onchange=e=>{sourceReportFilter=e.target.value;render()};
 }
 
-function transTable(ts,edit=true){return ts.length?`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Type</th><th>Item / source</th><th>Member</th><th>Bank account</th><th>Source</th><th>Notes</th><th class="right">Amount</th>${edit?'<th></th>':''}</tr></thead><tbody>${ts.map(t=>`<tr><td>${esc(t.date)}</td><td><span class="tag">${t.type==='income'?'Income':'Expense'}</span></td><td>${esc(t.type==='income'?t.label:(getItem(t.itemId)?.name||t.label||'Other'))}</td><td>${esc(person(t.personId))}</td><td>${esc(account(t.accountId)?.name||'Unknown account')}</td><td>${esc(transactionSource(t))}</td><td>${esc(t.note||'—')}</td><td class="right ${t.type==='income'?'green':'red'}">${t.type==='income'?'+':'−'}${curr(t.amount)}</td>${edit?`<td><div class="actions"><button class="btn secondary small" onclick="openTransaction(null,null,'${t.id}')">Edit</button><button class="btn danger small" onclick="deleteTransaction('${t.id}')">Delete</button></div></td>`:''}</tr>`).join('')}</tbody></table></div>`:'<div class="empty">No transactions yet. Add a salary deposit or expense to begin.</div>'}
+function transTable(ts,edit=true){return ts.length?`<div class="tablewrap"><table><thead><tr><th>Date</th><th>Type</th><th>Item / source</th><th>Member</th><th>Bank account</th><th>Source</th><th>Notes</th><th class="right">Amount</th>${edit?'<th></th>':''}</tr></thead><tbody>${ts.map(t=>`<tr><td>${esc(t.date)}</td><td><span class="tag ${t.type==='income'?'income':'expense'}">${t.type==='income'?'Income':'Expense'}</span></td><td>${esc(t.type==='income'?t.label:(getItem(t.itemId)?.name||t.label||'Other'))}</td><td>${esc(person(t.personId))}</td><td>${esc(account(t.accountId)?.name||'Unknown account')}</td><td>${esc(transactionSource(t))}</td><td>${esc(t.note||'—')}</td><td class="right ${t.type==='income'?'green':'red'}">${t.type==='income'?'+':'−'}${curr(t.amount)}</td>${edit?`<td><div class="actions"><button class="btn secondary small" onclick="openTransaction(null,null,'${t.id}')">Edit</button><button class="btn danger small" onclick="deleteTransaction('${t.id}')">Delete</button></div></td>`:''}</tr>`).join('')}</tbody></table></div>`:'<div class="empty">No transactions yet. Add a salary deposit or expense to begin.</div>'}
 function transactionsPage(){return `<section class="panel"><div class="panelhead"><h2>Daily transaction ledger</h2><div class="split"><button class="btn secondary small" onclick="openTransaction('income')">+ Income</button><button class="btn small" onclick="openTransaction('expense')">+ Expense</button></div></div>${transTable(cy().transactions.slice().sort((a,b)=>b.date.localeCompare(a.date)))}</section>`}
 function incomePage(){return `<div class="cards"><div class="card"><div class="label">Estimated household income</div><div class="value">${curr(estimates())}</div></div><div class="card"><div class="label">Actual deposits</div><div class="value green">${curr(income())}</div></div><div class="card"><div class="label">Income difference</div><div class="value ${income()-estimates()<0?'red':'green'}">${curr(income()-estimates())}</div></div><div class="card"><div class="label">After actual expenses</div><div class="value">${curr(income()-expenses())}</div></div></div><div class="panel"><div class="panelhead"><h2>Estimated salary and income sources</h2><button class="btn small" onclick="openIncomeEstimate()">+ Income estimate</button></div><div class="tablewrap"><table><thead><tr><th>Household member</th><th>Income source</th><th class="right">Estimated</th><th class="right">Actual received (matching deposits)</th><th></th></tr></thead><tbody>${cy().incomeEstimates.map(i=>{let actual=cy().transactions.filter(t=>t.type==='income'&&t.incomeEstimateId===i.id).reduce((s,t)=>s+money(t.amount),0);return `<tr><td>${esc(person(i.personId))}</td><td>${esc(i.name)}</td><td class="right">${curr(i.amount)}</td><td class="right">${curr(actual)}</td><td><div class="actions"><button class="btn secondary small" onclick="openIncomeEstimate('${i.id}')">Edit</button><button class="btn small" onclick="openTransaction('income',null,null,'${i.id}')">Record deposit</button></div></td></tr>`}).join('')}</tbody></table></div><p class="note">Unlinked deposits are included in actual income but not attributed to a specific salary estimate.</p></div><section class="panel"><div class="panelhead"><h2>Actual income deposits</h2><button class="btn small" onclick="openTransaction('income')">+ Actual income</button></div>${transTable(cy().transactions.filter(t=>t.type==='income').slice().sort((a,b)=>b.date.localeCompare(a.date)))}</section>`}
 function accountsPage(){return `<section class="panel"><div class="panelhead"><h2>Household members</h2><button class="btn small" onclick="openPerson()">+ Member</button></div><div class="split">${state.people.map(p=>`<div class="account"><strong>${esc(p.name)}</strong><button class="btn secondary small" onclick="openPerson('${p.id}')">Rename</button></div>`).join('')}</div></section><section class="panel"><div class="panelhead"><h2>Bank accounts and opening balances</h2><button class="btn small" onclick="openAccount()">+ Bank account</button></div><p class="note">Set the opening balance at the beginning of each pay cycle. Every transaction then updates the running balance of its selected account.</p><div class="accountgrid">${balances().map(a=>`<div class="account"><span class="muted">${esc(person(a.personId))}</span><h3>${esc(a.name)}</h3><span class="muted">Opening ${curr(cy().opening[a.id])}</span><strong class="${a.balance<0?'red':'green'}">${curr(a.balance)}</strong><button class="btn secondary small" onclick="openAccount('${a.id}')">Edit account / opening</button></div>`).join('')}</div></section><section class="panel"><div class="panelhead"><h2>Data and backups</h2></div><div class="split"><button class="btn secondary" onclick="exportData()">Export JSON backup</button><button class="btn secondary" onclick="document.getElementById('importFile').click()">Import JSON backup</button><button class="btn danger" onclick="resetData()">Reset to October worksheet</button></div><p class="note">Your information stays in local browser storage, not a cloud account. Back up periodically and do not clear browser data without exporting first.</p></section>`}
@@ -290,7 +471,7 @@ window.addEventListener('unhandledrejection',function(e){var root=document.getEl
 let currentUser=null;
 const root=document.getElementById('authRoot');
 function authScreen(setup=false,message=''){
- root.innerHTML=`<div class="authCover"><div class="authPanel"><h1>◈ HomeLedger</h1><p>${setup?'Create the first household administrator':'Sign in to your household budget'}</p><form id="authForm">${setup?'<label>Your name<input name="name" required autocomplete="name"></label>':''}<label>Email<input name="email" type="email" required autocomplete="email"></label><label>Password<input name="password" type="password" minlength="12" required autocomplete="${setup?'new-password':'current-password'}"></label>${setup?'<label>Cloudflare bootstrap token<input name="bootstrapToken" type="password" required></label>':''}<p id="authError" class="error">${esc(message)}</p><button type="submit">${setup?'Create household':'Sign in'}</button></form></div></div>`;
+ root.innerHTML=`<div class="authCover"><div class="authPanel"><h1><span class="mark" aria-hidden="true"></span>HomeLedger</h1><p>${setup?'Create the first household administrator':'Sign in to your household budget'}</p><form id="authForm">${setup?'<label>Your name<input name="name" required autocomplete="name"></label>':''}<label>Email<input name="email" type="email" required autocomplete="email"></label><label>Password<input name="password" type="password" minlength="12" required autocomplete="${setup?'new-password':'current-password'}"></label>${setup?'<label>Cloudflare bootstrap token<input name="bootstrapToken" type="password" required></label>':''}<p id="authError" class="error">${esc(message)}</p><button type="submit">${setup?'Create household':'Sign in'}</button></form></div></div>`;
  document.getElementById('authForm').onsubmit=async e=>{e.preventDefault();const values=Object.fromEntries(new FormData(e.target));try{await api(setup?'/setup':'/login','POST',values);root.innerHTML='';await loadCloud()}catch(err){document.getElementById('authError').textContent=err.message}};
 }
 async function loadCloud(){try{let me=await api('/me');currentUser=me.user;let data=await api('/state');cloudVersion=data.version;if(data.state&&valid(data.state)){state=data.state;if(currentUser.role==='member'){memberCycleId=state.cycles.slice().sort((a,b)=>(b.start||b.month||'').localeCompare(a.start||a.month||''))[0]?.id||null}else ensureItemTemplates()}else if(currentUser.role==='admin'){state=initial();save()}else{throw Error('Household budget is not initialized yet. Ask the administrator to sign in first.')}root.innerHTML='';addCloudControls();render()}catch(err){if(err.status===401){let setup=await api('/setup/status');authScreen(setup.setupRequired)}else{root.innerHTML='<div class="authCover"><div class="authPanel"><h2>Could not load budget</h2><p>'+esc(err.message)+'</p><button onclick="location.reload()">Try again</button></div></div>'}}}
